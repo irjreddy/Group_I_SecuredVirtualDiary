@@ -15,6 +15,7 @@ int menu(){ //Menu options, returns the selected option
 
 	printf("\t[1] Add Todays Record \n");
 	printf("\t[2] View Previous Records\n");
+	printf("\t[2] Edit Records\n");
 
 	printf("Choice : ");
 
