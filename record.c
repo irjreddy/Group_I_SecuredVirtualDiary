@@ -85,6 +85,41 @@ void newRecord(){ //create a new record
 	fclose(postfile);
 }
 
+int deleterecord(){
+	char filename[50] ="";
+	FILE *fp;
+	 printf("\n Enter date of record to be delted:[dd-mm-yyyy]:");
+				
+				
+                fgets(filename,sizeof(filename),stdin);
+				 filename[strlen(filename)-1] = '\0';
+				
+				snprintf(filename, sizeof(filename), "%s.txt", filename);
+				
+                fp = fopen (filename, "r" ) ;
+
+                if ( fp == NULL )
+
+                {
+
+                    printf("\n Sorry, file does not exists, please check date entered!");
+
+                
+                    return -1 ;
+
+                }
+
+                fclose(fp);
+
+                remove(filename);
+
+                printf("\n Deleted...");
+				return 0;
+
+}
+
+
+
 
 
 int main(int argc, char const *argv[])
