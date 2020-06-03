@@ -16,7 +16,7 @@ int userMenu(){ // displays User Menu, then returns the selected option
 	printf("\t[1] Add Todays Record \n"); // SHOULD LINK RECORD.C ADDRECORD() FUNCTION LATER ON
 	printf("\t[2] View Previous Records\n");
 	printf("\t[2] Edit Records\n");
-	printf("\t[2] Delete Records\n"); 
+	printf("\t[2] Delete Records\n");  // should link delete function when switch case is ready
 	printf("\t[2] Search Records \n");
 	printf("\t[2] Monthly CalenderView \n");
 	printf("\t[2] Edit Password \n"); // this option will be available in release 2
