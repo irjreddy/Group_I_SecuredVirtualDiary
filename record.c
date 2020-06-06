@@ -3,24 +3,7 @@
 #include <string.h>
 #include <time.h>
 
- typedef struct User
-{
-	char *name;
-	char *email;
-	
-	char *password;
-	
-	int isLoggedIn;
-}user;
-typedef struct 
-{
-	user *creator;
-	char *subject;
-	char *data;
-	int day;
-	int month;
-	int year;
-}post;
+#include "record.h"
 
 void clean_stdin(){ //clean the buffer
     int c;
@@ -29,8 +12,8 @@ void clean_stdin(){ //clean the buffer
         c = getchar();
     } while (c != '\n' && c != EOF);
 }
-void newRecord(){ //create a new record
-	//FILE *postfile = fopen("post.txt", "a+");
+void addRecord(){ //create a new record
+	
 	char data[150] = "";
 	char finalpost[500] = "";
 	char post_subject[50]="";
@@ -55,16 +38,18 @@ void newRecord(){ //create a new record
 	
 
     printf("Enter subject for the post \n");
+	getchar();
+	
     fgets(post_subject, sizeof(post_subject),stdin);
 	post_creator.subject = post_subject;
     printf("Enter Record Now: \n ");
+	getchar();
     clean_stdin();
-	while(*data != 24){ //Enable user to write until he types CTRL + X
+	while(*data != 24){ //Enable user to write until he types CTRL + X which is the 24
 		fgets(data, sizeof(data), stdin);
 		strcat(finalpost, data);
 	}
-//	post_subject[strlen(post_subject)-1] = "\0";
-	 //snprintf(post_subject, sizeof(post_subject), "%s.txt", post_subject);
+
 	char date_str[100];
 	snprintf(date_str, sizeof(date_str), "%d-%d-%d.txt", post_creator.day, post_creator.month, post_creator.year);
     printf("Todays date is %s ",date_str);
@@ -75,7 +60,7 @@ void newRecord(){ //create a new record
 
 	post_creator.data = finalpost;
 	
-	finalpost[strlen(finalpost)-1] = '\0'; /*So that no extra char in added in the post*/
+	finalpost[strlen(finalpost)-1] = '\0'; 
 	
 	printf("\n\n\n");
 	printf("Your post : \n%s\n", finalpost);
@@ -85,11 +70,11 @@ void newRecord(){ //create a new record
 	fclose(postfile);
 }
 
-int deleterecord(){
+int deleteRecord(){
 	char filename[50] ="";
 	FILE *fp;
 	 printf("\n Enter date of record to be delted:[dd-mm-yyyy]:");
-				
+				getchar();
 				
                 fgets(filename,sizeof(filename),stdin);
 				 filename[strlen(filename)-1] = '\0';
@@ -122,11 +107,3 @@ int deleterecord(){
 
 
 
-int main(int argc, char const *argv[])
-{
-	newRecord();
-
-	
-	
-	return 0;
-}
