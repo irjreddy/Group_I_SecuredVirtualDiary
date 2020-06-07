@@ -2,7 +2,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include<windows.h>
 #include<time.h>
 
 #ifdef _WIN32	//If in windows
@@ -11,6 +10,14 @@
 	#define CLEAR system("clear");	//If linux/Mac
 #endif
 
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
 
 
 void echo(char print[]){
@@ -40,73 +47,59 @@ void span(int space){
 }
 void ccolor(int clr){
 
-	HANDLE  hConsole;
-	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hConsole, clr);
+	//HANDLE  hConsole;
+	//hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	//SetConsoleTextAttribute(hConsole, clr);
 
 }
 
 void welcome_screen(){
-	ccolor(26);
+	
 
 	char welcome[50]=" WELCOME ";
 	char welcome2[50]=" TO  ";
 	char welcome3[50]=" Secured Virtual  ";
 	char welcome4[50]=" Diary  ";
-	printf("\n\n\n\n\n\t\t\t");
+		printf("\n\n\n\n\n\t\t\t");
 	for(int wlc=0; wlc<strlen(welcome);wlc++){
-             ccolor(120+(wlc*9));
-
-		printf(" %c",welcome[wlc]);
-		Sleep(200);
+           
+		printf("%s%c",KRED,welcome[wlc]);
+		sleep(0.200);
 	}
 	ccolor(26);
-	printf("\n\n\t\t\t\t ");
+	printf("\n\n\t\t\t\t");
 	for(int wlc2=0; wlc2<strlen(welcome2) ;wlc2++){
-            ccolor(160+(wlc2*9));
+           
 
-		printf(" %c",welcome2[wlc2]);
-		Sleep(200);
+		printf(" %s%c",KGRN,welcome2[wlc2]);
+		sleep(0.200);
 	}
 	ccolor(26);
 	printf("\n\n\n\t\t\t ");
 	for(int wlc3=0; wlc3<strlen(welcome3) ;wlc3++){
-		if(welcome3[wlc3]!='D'){
-		    ccolor(121+(wlc3*4));
+		
 
-			printf(" %c",welcome3[wlc3]);
-		}
-		else{
-		    ccolor(11);
+		printf(" %s%c",KYEL,welcome3[wlc3]);
+		
 
-			printf(" %c",welcome3[wlc3]);
-		}
-
-		Sleep(200);
+		sleep(0.200);
 	}
-	ccolor(26);
+
+	
 	printf("\n\n\n\t\t\t\t ");
-	for(int wlc3=0; wlc3<strlen(welcome4) ;wlc3++){
-		if(welcome4[wlc3]!='A' && welcome4[wlc3]!='E'){
-                ccolor(121+(wlc3*4));
-
-			printf(" %c",welcome4[wlc3]);
-		}
-		else{
-		    ccolor(11);
-
-			printf(" %c",welcome4[wlc3]);
-		}
-		Sleep(200);
+	for(int wlc4=0; wlc4<strlen(welcome4) ;wlc4++){
+		
+			printf(" %s%c",KBLU,welcome4[wlc4]);
+		
+		sleep(0.200);
 	}
-	ccolor(26);
-
+	printf("\n\n\t\t\t ");
 }
 void loading(){
 
 	for (int i=15;i<=100;i+=5){
 
-        CLEAR
+		CLEAR
 		ccolor(26);
 
 		printf("\n\n\n\n\n\n\n\t\t\t\t");
@@ -121,9 +114,9 @@ void loading(){
 			ccolor(26);
 
 		}
-		Sleep(100);
+		sleep(0.5);
 		if(i==90 || i==50 || i==96 || i==83){
-			Sleep(100);
+			sleep(1);
 		}
 
 	}

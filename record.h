@@ -21,3 +21,4 @@ typedef struct
 
 void addRecord();
 int deleteRecord();
+int viewRecord();

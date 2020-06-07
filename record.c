@@ -104,6 +104,46 @@ int deleteRecord(){
 }
 
 
+int viewRecord(){
+char filename[50] ="";
+	FILE *recordFile;
+	 printf("\n Enter date of record to be Viewed:[dd-mm-yyyy]:");
+				getchar();
+				
+                fgets(filename,sizeof(filename),stdin);
+				 filename[strlen(filename)-1] = '\0';
+				
+				snprintf(filename, sizeof(filename), "%s.txt", filename);
+				
+                recordFile = fopen (filename, "r" ) ;
+
+                if ( recordFile == NULL )
+
+                {
+
+                    printf("\n Sorry, file does not exists, please check date entered!");
+
+                
+                    return -1 ;
+
+                }
+
+               
+
+char c = 'c';
+
+	while(c != 24){
+		c = fgetc(recordFile);
+		
+		if(c == 24)
+			continue;
+		printf("%c", c);
+	}
+	
+	fclose(recordFile);
+return 0;
+}
+
 
 
 

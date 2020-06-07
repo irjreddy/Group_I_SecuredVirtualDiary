@@ -39,6 +39,7 @@ void execChoice(int choice){
 		break;
 
 		case 2:
+		viewRecord();
 		break;
 
 		case 3:
