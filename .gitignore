@@ -3,4 +3,5 @@ a.exe
 .DS_Store
 record.h.gch
 a.out
-.txt
+*.txt
+7-6-2020.txt

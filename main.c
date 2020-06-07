@@ -19,17 +19,19 @@ int main()
 	
 	
 	
-		CLEAR
+		
 		loading();
 		CLEAR
 		welcome_screen(); // show welcome page
-		
+		sleep(3);
 		CLEAR
 		printf("********   Welcome To your Secured Virtual Diary   ********\n");
 
-	
-		int choice = userMenu();
-		execChoice(choice);
+		do {
+			int choice = userMenu();
+			execChoice(choice);
+		}while(1);
+		
 
 	return 0;
 }
