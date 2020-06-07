@@ -3,6 +3,7 @@
 #include <unistd.h>
 
 #include "app.h"
+#include "ui_design.h"
 
 #ifdef _WIN32	//If in windows
 	#define CLEAR system("cls");
@@ -11,9 +12,7 @@
 #endif
 
 
-void welcome_screen(){
-	
-}
+
 
 int main()
 {
@@ -21,8 +20,11 @@ int main()
 	
 	
 		CLEAR
+		loading();
+		CLEAR
 		welcome_screen(); // show welcome page
-
+		
+		CLEAR
 		printf("********   Welcome To your Secured Virtual Diary   ********\n");
 
 	
