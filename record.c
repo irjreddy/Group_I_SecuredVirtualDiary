@@ -144,6 +144,11 @@ char c = 'c';
 return 0;
 }
 
+int getCalenderView(){
+
+	// calenderview 
+}
+
 
 
 
