@@ -62,11 +62,13 @@ void addRecord(){ //create a new record
 		fgets(data, sizeof(data), stdin);
 		strcat(finalpost, data);
 	}
+	mkdir("records",07777);
 
 	char date_str[100];
-	snprintf(date_str, sizeof(date_str), "%d-%d-%d.txt", post_creator.day, post_creator.month, post_creator.year);
+	snprintf(date_str, sizeof(date_str), "records/%d-%d-%d.txt", post_creator.day, post_creator.month, post_creator.year);
     printf("Todays date is %s ",date_str);
-
+	
+	printf("file to be added %s",date_str);
 
     FILE *postfile = fopen(date_str,"w");
     fprintf(postfile, "Date : %d/%d/%d Heure : %d:%d\n", post_creator.day, post_creator.month, post_creator.year, (int)lt->tm_hour, (int)lt->tm_min);
@@ -85,6 +87,7 @@ void addRecord(){ //create a new record
 
 int deleteRecord(){
 	char filename[50] ="";
+	char foldername[50]="./records/";
 	FILE *fp;
 	 printf("\n Enter date of record to be delted:[dd-mm-yyyy]:");
 				getchar();
@@ -93,8 +96,9 @@ int deleteRecord(){
 				 filename[strlen(filename)-1] = '\0';
 				
 				snprintf(filename, sizeof(filename), "%s.txt", filename);
-				
-                fp = fopen (filename, "r" ) ;
+				printf("filen to be delted %s",filename);
+				strcat(foldername,filename);
+                fp = fopen (foldername, "r" ) ;
 
                 if ( fp == NULL )
 
@@ -109,7 +113,7 @@ int deleteRecord(){
 
                 fclose(fp);
 
-                remove(filename);
+                remove(foldername);
 
                 printf("\n Deleted...");
 				return 0;
@@ -118,7 +122,8 @@ int deleteRecord(){
 
 
 int viewRecord(){
-char filename[50] ="";
+char filename[100] ="";
+char foldername[50]="./records/";
 	FILE *recordFile;
 	 printf("\n Enter date of record to be Viewed:[dd-mm-yyyy]:");
 				getchar();
@@ -126,10 +131,12 @@ char filename[50] ="";
                 fgets(filename,sizeof(filename),stdin);
 				 filename[strlen(filename)-1] = '\0';
 				
-				snprintf(filename, sizeof(filename), "%s.txt", filename);
+				snprintf(filename, sizeof(filename), "%s.txt",filename);
 				
-                recordFile = fopen (filename, "r" ) ;
-
+				strcat(foldername,filename);
+				//printf("file tobe viewed name is %s",foldername);
+                recordFile = fopen (foldername, "r" ) ;
+				
                 if ( recordFile == NULL )
 
                 {
@@ -162,6 +169,7 @@ int editRecord(){
 	char finalpost[500] = "";
 	char post_subject[50]="";
 	char filename[50] ="";
+	char foldername[50]="./records/";
 	char firstline[200]="";
 	FILE *fp;
 	red();
@@ -173,8 +181,8 @@ int editRecord(){
 				 filename[strlen(filename)-1] = '\0';
 				
 				snprintf(filename, sizeof(filename), "%s.txt", filename);
-			
-                fp = fopen (filename, "r" ) ;
+			strcat(foldername,filename);
+                fp = fopen (foldername, "r" ) ;
 
                 if ( fp == NULL )
 
@@ -219,7 +227,7 @@ int editRecord(){
 	}
 
 
-					FILE *postfile = freopen(filename,"w",fp);
+					FILE *postfile = freopen(foldername,"w",fp);
 					fprintf(postfile, firstline); // writing previous date
 
 					
@@ -240,10 +248,7 @@ int editRecord(){
 
 
 
-int getCalenderView(){
 
-	// calenderview 
-}
 
 
 

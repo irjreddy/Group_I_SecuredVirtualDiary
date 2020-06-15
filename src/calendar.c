@@ -3,20 +3,18 @@
 #include<windows.h>
 #include<time.h>
 
-int run()
+int runCalendar()
 {
-    int nmonth,nyr,ch;
+     int nmonth,nyr,ch;
     
-    while(1)
-    {
-       	time_t mtime;                       
+    time_t mtime;                       
 	time(&mtime);
 	struct tm *lt = localtime(&mtime); //returns  localtime
 
 	nmonth = (int)lt->tm_mon+1;
 	nyr =  (int)lt->tm_year+1900;
        
-        //callto  calendar function here
+        calendar(nyr,nmonth);
         while(1)
         {
         gotoxy(20,20);printf("(*) Use LEFT, RIGHT, UP and DOWN arrow.");
@@ -74,14 +72,16 @@ int run()
          
                 system("cls");
                 gotoxy(50,14);printf("Returning to Main Menu.\n\n\n\n\n");
+                break;
                 
         
         }
-        }
         break;
+        }
+       
 
-    }
-    getch();
+   // getch();
+   sleep(1);
     return 0;
 }
 

@@ -1,6 +1,13 @@
 #include<stdio.h>
 #include "../include/app.h"
 #include "../include/record.h"
+//#include "calendar.h"
+
+#ifdef _WIN32	//If in windows
+	#define CLEAR system("cls");
+#else 
+	#define CLEAR system("clear");	//If linux/Mac
+#endif
 
 
 int userMenu(){ // displays User Menu, then returns the selected option
@@ -54,6 +61,8 @@ void execChoice(int choice){
 		break;
 
 		case 6:
+		//runCalendar();
+		CLEAR
 		break;
 
 		case 7:
