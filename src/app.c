@@ -43,6 +43,7 @@ void execChoice(int choice){
 		break;
 
 		case 3:
+		editRecord();
 		break;
 
 		case 4:

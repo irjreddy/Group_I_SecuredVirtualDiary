@@ -5,6 +5,19 @@
 
 #include "../include/record.h"
 
+
+void red () {
+  printf("\033[1;31m");
+}
+
+void yellow() {
+  printf("\033[1;33m");
+}
+
+void reset () {
+  printf("\033[0m");
+}
+
 void clean_stdin(){ //clean the buffer
     int c;
  
@@ -143,6 +156,89 @@ char c = 'c';
 	fclose(recordFile);
 return 0;
 }
+
+int editRecord(){
+	char data[150] = "";
+	char finalpost[500] = "";
+	char post_subject[50]="";
+	char filename[50] ="";
+	char firstline[200]="";
+	FILE *fp;
+	red();
+	 printf("\n Enter date of record to be edited:[dd-mm-yyyy]:");
+	 getchar();
+				
+				reset();
+                fgets(filename,sizeof(filename),stdin);
+				 filename[strlen(filename)-1] = '\0';
+				
+				snprintf(filename, sizeof(filename), "%s.txt", filename);
+			
+                fp = fopen (filename, "r" ) ;
+
+                if ( fp == NULL )
+
+                {
+					red();
+                    printf("\nTHE FILE DOES NOT EXISTS");
+					reset();
+                
+                    return -1 ;
+
+                }
+				else{
+					red();
+					printf("\n \n Your old Record is: \n \n");
+					reset();
+					char c = 'c';
+					fgets(firstline,200,fp);
+					while(c != 24){
+						c = fgetc(fp);
+						
+						if(c == 24)
+							continue;
+						printf("%c", c);
+					}
+					getchar();
+	red();
+	printf("\n Enter your new record now \n \n");
+	printf("This is your Editor, you can type anything");
+	printf("Start writing and press CTRL + X on a new line when finished\n");
+	printf("====================================================================\n\n\n");
+
+	
+	
+    printf("Enter subject for the record \n"); reset();
+    fgets(post_subject, sizeof(post_subject),stdin);
+	red();
+    printf("Enter Record Now: \n ");reset();
+    //clean_stdin();
+	while(*data != 24){ //Enable user to write until he types CTRL + X
+		fgets(data, sizeof(data), stdin);
+		strcat(finalpost, data);
+	}
+
+
+					FILE *postfile = freopen(filename,"w",fp);
+					fprintf(postfile, firstline); // writing previous date
+
+					
+					finalpost[strlen(finalpost)-1] = '\0'; /*So that no extra char in added in the post*/
+					
+					printf("\n\n\n");
+					printf("Your post : \n%s\n", finalpost);
+					fprintf(postfile, "Subject :%s\n",post_subject);
+					fprintf(postfile, "Post :\n%s\n-- Complete --\n\n\n", finalpost);
+	
+
+ 					fclose(postfile);
+				}
+
+               
+
+}
+
+
 
 int getCalenderView(){
 
