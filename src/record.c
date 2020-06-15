@@ -57,7 +57,7 @@ void addRecord(){ //create a new record
 	post_creator.subject = post_subject;
     printf("Enter Record Now: \n ");
 	//getchar();
-    clean_stdin();
+   // clean_stdin();
 	while(*data != 24){ //Enable user to write until he types CTRL + X which is the 24
 		fgets(data, sizeof(data), stdin);
 		strcat(finalpost, data);
@@ -219,7 +219,7 @@ int editRecord(){
     printf("Enter subject for the record \n"); reset();
     fgets(post_subject, sizeof(post_subject),stdin);
 	red();
-    printf("Enter Record Now: \n ");reset();
+    printf("Enter Record Now: \n");reset();
     //clean_stdin();
 	while(*data != 24){ //Enable user to write until he types CTRL + X
 		fgets(data, sizeof(data), stdin);
