@@ -17,9 +17,7 @@
 int main()
 {
 	
-	
-	
-		
+
 		loading();
 		CLEAR
 		welcome_screen(); // show welcome page

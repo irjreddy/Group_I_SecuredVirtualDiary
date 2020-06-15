@@ -31,7 +31,7 @@ void addRecord(){ //create a new record
 	post_creator.year =  (int)lt->tm_year+1900;
 
 	
-	printf("This is your Editor, you can type anything");
+	printf("This is your Editor, you can type anything \n");
 	printf("Start writing and press CTRL + X on a new line when finished\n");
 	printf("====================================================================\n\n\n");
 
@@ -43,7 +43,7 @@ void addRecord(){ //create a new record
     fgets(post_subject, sizeof(post_subject),stdin);
 	post_creator.subject = post_subject;
     printf("Enter Record Now: \n ");
-	getchar();
+	//getchar();
     clean_stdin();
 	while(*data != 24){ //Enable user to write until he types CTRL + X which is the 24
 		fgets(data, sizeof(data), stdin);
