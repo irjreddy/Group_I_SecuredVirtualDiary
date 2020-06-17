@@ -51,7 +51,7 @@ int runCalendar()
 
 	nmonth = (int)lt->tm_mon+1;
 	nyr =  (int)lt->tm_year+1900;
-       
+       while(1){
         calendar(nyr,nmonth);
         while(1)
         {
@@ -110,16 +110,157 @@ int runCalendar()
          
                 system("cls");
                 gotoxy(50,14);printf("Returning to Main Menu.\n\n\n\n\n");
+                goto exit;
                 break;
+                
+
                 
         
         }
-        break;
-        }
        
-
+        }
+         break;
+}
+       
+    exit:
    // getch();
    sleep(1);
     return 0;
 }
 
+//============== DISPLAYING THE  CALENDAR ===================
+void displayCalendar(int nyr,int nmonth,int tdays,int days[])
+{
+    int i,j,pos;
+    SetColor(12); //Color red
+    gotoxy(56,6);printf("%s %d",month[nmonth-1],nyr); //Heading year and month dispalying
+    for(i=0,pos=30;i<7;i++,pos+=10)
+    {
+         if(i==6)
+            SetColor(9); //Sunday color blue
+         else
+            SetColor(10);  //Others day color green
+        gotoxy(pos,8);printf("%s",week[i]);
+    }
+
+    SetColor(15); //setting the color white
+
+   tdays++; //incrementing the tdays by 1
+    if(tdays==0 || tdays==7)
+        pos=91; //if tdays is 0 or 7, position is sunday
+    if(tdays==1)
+        pos=31; //if tdays is 1, position is monday
+    if(tdays==2)
+        pos=41;  //if tdays is 2, position is tuesday
+    if(tdays==3)
+        pos=51;  //if tdays is 3, position is wednesday
+    if(tdays==4)
+        pos=61;  //if tdays is 4, position is thursday
+    if(tdays==5)
+        pos=71;  //if tdays is 5, position is friday
+    if(tdays==6)
+        pos=81;  //if tdays is 6, position is saturday
+
+    for(i=0,j=10,pos;i<days[nmonth-1];i++,pos+=10)
+    {
+        if(pos==91)
+            SetColor(8); //Changing color to dark grey for sunday
+        else
+            SetColor(7); //Changing color to white for all days
+    char date_str[100];
+    char foldername[100]="./records/";
+	snprintf(date_str, sizeof(date_str), "%d-%d-%d.txt", i+1,nmonth,nyr);
+    strcat(foldername,date_str);
+        FILE *fp = fopen(foldername,"r");
+        if(fp == NULL){
+           gotoxy(pos,j);printf("Missing"); 
+        }
+        else{
+            gotoxy(pos,j);printf("%d-%d-%d",i+1,nmonth,nyr);
+        }
+        // gotoxy(pos,j);printf("%d-%d-%d",i+1,nmonth-1,nyr);
+        if(pos==91)
+        {
+            pos=21; //Moving position to monday
+            j++;  //Increasing j by 10 if position is sunday
+        }
+        fclose(fp);
+    }
+
+    SetColor(5); //Changing color to purple
+
+    //Drawing horizontal line
+    for(i=22;i<102;i++)
+    {
+        gotoxy(i,4);printf("%c",196);
+        gotoxy(i,17);printf("%c",196);
+    }
+
+    //Drawing all the corner of the rectangle
+    gotoxy(21,4);printf("%c",218);
+    gotoxy(102,4);printf("%c",191);
+    gotoxy(21,17);printf("%c",192);
+    gotoxy(102,17);printf("%c",217);
+
+    //Drawing vertical line
+    for(i=5;i<17;i++)
+    {
+        gotoxy(21,i);printf("%c",179);
+        gotoxy(102,i);printf("%c",179);
+    }
+
+    SetColor(11); //Changing color
+
+    //Navigation Symbol
+    gotoxy(24,11);printf("%c",174);
+    gotoxy(98,11);printf("%c",175);
+
+}
+
+//==============  ARROW KEY ===============
+int getkey()
+{
+    int ch;
+    ch=getch();
+     if(ch==0)
+    {
+        printf("zero");
+        ch=getch();
+
+        return ch;
+    }
+    return ch;
+}
+
+
+void calendar(int nyr,int nmonth)
+{
+    int days[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+    int tdays=0,k,myear;
+    system("cls");
+    myear=nyr-1; //Decrease year by 1
+            if(myear>=1945)
+            {
+                for(k=1945;k<=myear;k++)
+                {
+                    if(k%4==0) //If the year is a leap year than  no of days is 366
+                        tdays=tdays+366;  //counting all the days till nyr - 1
+                    else //If the year is a leap year than total no of days is 365
+                        tdays=tdays+365;  //counting all the days till nyr - 1
+                }
+            }
+
+            if(nyr%4==0)
+                days[1]=29; //changing value in days array from 28 to 29 since leap year
+            else
+                days[1]=28; //changing value in days array from 29 to 28 since not a leap year
+
+            for(k=0;k<(nmonth-1);k++)
+            {
+
+                tdays=tdays+days[k]; //Adding nmonth-1 days to tdays
+            }
+
+            tdays=tdays%7; //Finding the remainder of tdays so it can calculate the position to display
+            displayCalendar(nyr,nmonth,tdays,days); 
+}
