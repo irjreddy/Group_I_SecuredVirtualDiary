@@ -24,10 +24,18 @@ int main()
 		sleep(3);
 		CLEAR
 		printf("********   Welcome To your Secured Virtual Diary   ********\n");
+		int user=0;
+		do {
+
+			 int choice = mainMenu();
+			 user = execMainMenuChoice(choice);
+
+			
+		}while(user == 0);  //user == NULL
 
 		do {
 			int choice = userMenu();
-			execChoice(choice);
+			execUserMenuChoice(choice);
 		}while(1);
 		
 
