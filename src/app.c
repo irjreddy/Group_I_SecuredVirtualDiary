@@ -67,14 +67,7 @@ printf(" Please Select an option from the User menu\n");
 	return option;
 }
 
-int signIn(){
 
-}
-
-int signUp(){
-
-
-}
 
 int execMainMenuChoice(int choice){
 	switch(choice)
@@ -86,9 +79,10 @@ int execMainMenuChoice(int choice){
 		return signUp();
 		break;
 	}
+	return 0;
 }
 
-void execChoice(int choice){
+void execUserMenuChoice(int choice){
 
 	switch(choice)
 	{
@@ -115,7 +109,7 @@ void execChoice(int choice){
 		#ifdef _WIN32	//If in windows
 			
 		#else 
-			runCalendar();
+			//runCalendar();
 				CLEAR
 		#endif
 		
