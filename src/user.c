@@ -127,10 +127,10 @@ void createuser(user *newuser){ //Create a new user
 
 
 void registeruser(user *newuser){ //register a new user
-    FILE *pseudo = fopen("users.txt", "a+");
+    FILE *usersfile = fopen("users.txt", "a+");
 
-    fprintf(pseudo, "%s %s %s\n", newuser->username, newuser->password, newuser->email);
-    fclose(pseudo);
+    fprintf(usersfile, "%s %s %s\n", newuser->username, newuser->password, newuser->email);
+    fclose(usersfile);
 }   
 
 
