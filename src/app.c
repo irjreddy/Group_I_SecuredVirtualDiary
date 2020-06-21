@@ -18,21 +18,21 @@
 #endif
 
 
-user* mainMenu(user *loginuser){ 
+user* authUser(user *loginuser){ 
 
 	
-		unsigned short connexion;
+		unsigned short choice;
 		printf(" Please Select an option from the Main Menu\n");
 
 	printf("1. Sign in\n2. Sign up\n\nChoice : ");
 
-	while(scanf("%hi", &connexion) != 1 || connexion < 1 || connexion > 2){
+	while(scanf("%hi", &choice) != 1 || choice < 1 || choice > 2){
 		getchar(); 
 		printf("Wrong Choice \nPlease choose option between 1 and 2 \nChoice : ");
 	}
 	getchar();
 	
-	if(connexion == 1){
+	if(choice == 1){
 		printf("\n");
 		int login = signIn(loginuser);
 

@@ -29,7 +29,7 @@ int main()
 		int user=0;
 		do {
 
-			 loginuserptr = mainMenu(&loginuser);
+			 loginuserptr = authUser(&loginuser);
 			
 
 			
