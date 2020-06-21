@@ -31,7 +31,7 @@ void addRecord(){ //create a new record
 	char finalpost[500] = "";
 	char post_subject[50]="";
 	post post_creator; 
-	post_creator.creator = ""; // should be logged in username
+	
     
     
    
@@ -50,7 +50,7 @@ void addRecord(){ //create a new record
 
 	
 
-    printf("Enter subject for the post \n");
+    printf("Enter subject for the post\n");
 	getchar();
 	
     fgets(post_subject, sizeof(post_subject),stdin);

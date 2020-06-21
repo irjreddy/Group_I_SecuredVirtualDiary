@@ -1,15 +1,6 @@
 #include<stdio.h>
 #include "../include/app.h"
-
-
-
-
-#ifdef _WIN32	//If in windows
 #include "../include/calendar.h"
-#else 
-	
-#endif
-
 
 #ifdef _WIN32	//If in windows
 	#define CLEAR system("cls");
@@ -115,12 +106,9 @@ void execUserMenuChoice(int choice){
 		break;
 
 		case 6:
-		#ifdef _WIN32	//If in windows
-			
-		#else 
-			//runCalendar();
+		runCalendar();
 				CLEAR
-		#endif
+		
 		
 		break;
 
