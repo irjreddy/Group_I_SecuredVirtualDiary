@@ -16,7 +16,9 @@
 
 int main()
 {
-	
+	user loginuser;
+	user* loginuserptr = NULL;
+	char c;
 
 		loading();
 		CLEAR
@@ -27,11 +29,11 @@ int main()
 		int user=0;
 		do {
 
-			 int choice = mainMenu();
-			 user = execMainMenuChoice(choice);
+			 loginuserptr = mainMenu(&loginuser);
+			
 
 			
-		}while(user == 0);  //user == NULL
+		}while(loginuserptr == NULL);  //user == NULL
 
 		do {
 			int choice = userMenu();

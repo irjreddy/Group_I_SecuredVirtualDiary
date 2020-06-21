@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include "../include/app.h"
-#include "../include/record.h"
-#include "../include/user.h"
+
+
 
 
 #ifdef _WIN32	//If in windows
@@ -18,27 +18,35 @@
 #endif
 
 
-int mainMenu(){ // displays User Menu, then returns the selected option
-	int option;
+user* mainMenu(user *loginuser){ 
 
 	
-printf(" Please Select an option from the Main Menu\n");
-	printf("\t[1] Sign IN \n"); // SHOULD LINK RECORD.C ADDRECORD() FUNCTION LATER ON
+		unsigned short connexion;
+		printf(" Please Select an option from the Main Menu\n");
 
-	printf("\t[2] Sign UP \n");
-	
+	printf("1. Sign in\n2. Sign up\n\nChoice : ");
 
-	printf("Please Enter your Choice : ");
-
-	
-	
-	//if user enter something that is not the option, we show error
-	while(scanf("%d", &option) !=1 || option<1 || option >2)
-	{
-		printf(" Sorry, Please select a valid choice from the above!");
+	while(scanf("%hi", &connexion) != 1 || connexion < 1 || connexion > 2){
+		getchar(); 
+		printf("Wrong Choice \nPlease choose option between 1 and 2 \nChoice : ");
 	}
+	getchar();
+	
+	if(connexion == 1){
+		printf("\n");
+		int login = signIn(loginuser);
 
-	return option;
+		if(login){ //--> if(login == 1)
+	 		printf(" === Welcome %s ! ===\n\n", loginuser->username);
+		} 
+		else {
+	 		printf("Can't login \n Would you like to create an Account?\n");
+	 		return NULL;
+	 	}
+	}
+	else signUp(loginuser);
+
+	return loginuser;
 }
 
 int userMenu(){ // displays User Menu, then returns the selected option
@@ -70,18 +78,18 @@ printf(" Please Select an option from the User menu\n");
 
 
 
-int execMainMenuChoice(int choice){
-	switch(choice)
-	{
-		case 1:
-		return signIn(user *loginuser);
-		break;
-		case 2:
-		return signUp();
-		break;
-	}
-	return 0;
-}
+// int execMainMenuChoice(int choice){
+// 	switch(choice)
+// 	{
+// 		case 1:
+// 		return signIn(user *loginuser);
+// 		break;
+// 		case 2:
+// 		return signUp();
+// 		break;
+// 	}
+// 	return 0;
+// }
 
 void execUserMenuChoice(int choice){
 

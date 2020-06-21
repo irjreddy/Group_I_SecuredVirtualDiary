@@ -17,9 +17,9 @@ int signIn(user *loginuser){
 	printf("\n\n\n\n");
 	
 	if(isuser(username, password)){
-		strcpy(connecteduser->pseudo, pseudo);
-		strcpy(connecteduser->password, password);
-		connecteduser->connect = 1;
+		strcpy(loginuser->username, username);
+		strcpy(loginuser->password, password);
+		loginuser->isLoggedIn = 1;
 
 		return 1;
 	}
@@ -31,6 +31,8 @@ return 0;
 }
 
 int isuser(const char* username, const char* password){ //Check if the user exists 
+
+
 	char fileusername[20], filepass[20];
 
 	FILE* usersfile = fopen("users.txt", "r");
@@ -47,12 +49,3 @@ int isuser(const char* username, const char* password){ //Check if the user exis
 	return 0;
 }
 
-
-
-
-
-
-int signUp(user *newuser){
-
-return 0;
-}
