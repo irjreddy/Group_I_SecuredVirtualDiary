@@ -52,19 +52,25 @@ int isuser(const char* username, const char* password){ //Check if the user exis
 
 
 int availableuser(const char *username){ //Check if pseudo already exists
-    char taken[20],  takenpass[20], username[20];
+    char taken[20],  takenpass[20], fileusername[20];
 
     int age;
     FILE* usersfile = fopen("users.txt", "r");
 
-    while(!feof(usersfile)){
-        fscanf(usersfile, "%s %s %s", taken, takenpass, username);
+	if(usersfile != NULL){
+
+while(!feof(usersfile)){
+        fscanf(usersfile, "%s %s %s", taken, takenpass, fileusername);
         
         if(strcmp(username, taken) == 0){
             fclose(usersfile);
             return 0;
         }
     }
+
+	}
+
+    
 
     fclose(usersfile);
     return 1;
@@ -96,6 +102,11 @@ void createuser(user *newuser){ //Create a new user
         getchar();
     }
     
+	    printf("Email : ");
+    scanf("%s", newuser->email);
+    getchar();
+
+
     printf("Password : ");
     scanf("%s", newuser->password);
     getchar();
