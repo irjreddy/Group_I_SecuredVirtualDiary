@@ -1,14 +1,6 @@
 #include <stdio.h>
 
- typedef struct User
-{
-	char *name;
-	char *email;
-	
-	char *password;
-	
-	int isLoggedIn;
-}user;
+
 typedef struct 
 {
 	user *creator;

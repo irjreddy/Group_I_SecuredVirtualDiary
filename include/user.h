@@ -1,5 +1,15 @@
 #include <stdio.h>
 
-int signIn();
+ typedef struct User
+{
+	char *username;
+	char *email;
+	
+	char *password;
+	
+	int isLoggedIn;
+}user;
 
-int signUp();
+int signIn(user *loginuser);
+
+int signUp(user *newuser);

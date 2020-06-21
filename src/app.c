@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include "../include/app.h"
 #include "../include/record.h"
+#include "../include/user.h"
 
 
 #ifdef _WIN32	//If in windows
@@ -73,7 +74,7 @@ int execMainMenuChoice(int choice){
 	switch(choice)
 	{
 		case 1:
-		return signIn();
+		return signIn(user *loginuser);
 		break;
 		case 2:
 		return signUp();
