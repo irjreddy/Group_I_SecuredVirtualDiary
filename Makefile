@@ -10,7 +10,14 @@
 # project name (generate executable with this name)
 TARGET   = virtual_diary
 
-# change these to proper directories where each file should be
+
+
+
+
+
+
+
+#change these to proper directories where each file should be
 SRCDIR     	 = src
 SRCTESTDIR	 = test
 OBJDIR    	 = obj
@@ -22,6 +29,7 @@ INCTESTDIR	 = test/include
 CC       = gcc
 # compiling flags here
 CFLAGS   = -Wall
+
 
 
 INC      := -I$(INCDIR)  -I$(INCTESTDIR)
