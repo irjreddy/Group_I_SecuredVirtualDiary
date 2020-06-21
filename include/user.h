@@ -1,6 +1,7 @@
 #include <stdio.h>
 
- typedef struct User
+
+typedef struct
 {
 	char *username;
 	char *email;
@@ -9,6 +10,8 @@
 	
 	int isLoggedIn;
 }user;
+
+
 
 int signIn(user *loginuser);
 
