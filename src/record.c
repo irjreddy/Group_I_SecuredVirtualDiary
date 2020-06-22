@@ -25,7 +25,7 @@ void clean_stdin(){ //clean the buffer
         c = getchar();
     } while (c != '\n' && c != EOF);
 }
-void addRecord(){ //create a new record
+void addRecord(user *loginptr){ //create a new record
 	
 	char data[150] = "";
 	char finalpost[500] = "";
@@ -55,22 +55,28 @@ void addRecord(){ //create a new record
 	
     fgets(post_subject, sizeof(post_subject),stdin);
 	post_creator.subject = post_subject;
-    printf("Enter Record Now: \n ");
-	//getchar();
-   // clean_stdin();
+    printf("Enter Record Now:\n");
+	
 	while(*data != 24){ //Enable user to write until he types CTRL + X which is the 24
 		fgets(data, sizeof(data), stdin);
 		strcat(finalpost, data);
 	}
 	mkdir("records",07777);
+	mkdir(loginptr->username,07777);
+	char pa[50];
+	strcpy(pa,loginptr->username);
+	strcat(pa,"/records");
+	mkdir(pa,07777);
 
 	char date_str[100];
-	snprintf(date_str, sizeof(date_str), "records/%d-%d-%d.txt", post_creator.day, post_creator.month, post_creator.year);
+	char fullp[100];
+	strcpy(fullp,loginptr->username);
+	snprintf(date_str, sizeof(date_str), "/records/%d-%d-%d.txt", post_creator.day, post_creator.month, post_creator.year);
     printf("Todays date is %s ",date_str);
-	
+	strcat(fullp,date_str);
 	printf("file to be added %s",date_str);
 
-    FILE *postfile = fopen(date_str,"w");
+    FILE *postfile = fopen(fullp,"w");
     fprintf(postfile, "Date : %d/%d/%d Heure : %d:%d\n", post_creator.day, post_creator.month, post_creator.year, (int)lt->tm_hour, (int)lt->tm_min);
 
 	post_creator.data = finalpost;
@@ -85,7 +91,7 @@ void addRecord(){ //create a new record
 	fclose(postfile);
 }
 
-int deleteRecord(){
+int deleteRecord(user *loginptr){
 	char filename[50] ="";
 	char foldername[50]="./records/";
 	FILE *fp;
@@ -121,7 +127,7 @@ int deleteRecord(){
 }
 
 
-int viewRecord(){
+int viewRecord(user *loginptr){
 char filename[100] ="";
 char foldername[50]="./records/";
 	FILE *recordFile;
@@ -164,7 +170,7 @@ char c = 'c';
 return 0;
 }
 
-int editRecord(){
+int editRecord(user *loginptr){
 	char data[150] = "";
 	char finalpost[500] = "";
 	char post_subject[50]="";

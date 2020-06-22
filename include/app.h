@@ -2,6 +2,6 @@
 #include "../include/record.h"
 
 int userMenu();
-void execUserMenuChoice(int choice, user* loginptr);
+void execUserMenuChoice(int choice,user *login);
 user* authUser(user *loginuser);
 

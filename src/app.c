@@ -88,26 +88,26 @@ void execUserMenuChoice(int choice, user *loginptr){
 	switch(choice)
 	{
 		case 1:
-		addRecord();
+		addRecord(loginptr);
 		break;
 
 		case 2:
-		viewRecord();
+		viewRecord(loginptr);
 		break;
 
 		case 3:
-		editRecord();
+		editRecord(loginptr);
 		break;
 
 		case 4:
-		deleteRecord();
+		deleteRecord(loginptr);
 		break;
 
 		case 5:
 		break;
 
 		case 6:
-		runCalendar();
+		runCalendar(loginptr);
 				CLEAR
 		
 		

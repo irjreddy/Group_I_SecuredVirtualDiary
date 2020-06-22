@@ -40,6 +40,12 @@ int isuser(const char* username, const char* password, user *loginuser){ //Check
 	FILE* usersfile = fopen("users.txt", "r");
 	char filemail[20];
 
+    if(usersfile== NULL)
+    {
+        //printf("No Users Found, Sign UP First!");
+        return 0;
+    }
+
 	while(!feof(usersfile)){
 		fscanf(usersfile, "%s %s %s", fileusername, filepass,filemail);
 		if(strcmp(username, fileusername) == 0 && strcmp(password, filepass) == 0){
