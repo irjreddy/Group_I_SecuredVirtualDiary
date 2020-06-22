@@ -83,7 +83,7 @@ printf(" Please Select an option from the User menu\n");
 // 	return 0;
 // }
 
-void execUserMenuChoice(int choice){
+void execUserMenuChoice(int choice, user *loginptr){
 
 	switch(choice)
 	{
@@ -114,6 +114,7 @@ void execUserMenuChoice(int choice){
 		break;
 
 		case 7:
+		editPassword(loginptr);
 		break;
 
 		
