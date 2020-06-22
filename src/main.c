@@ -16,6 +16,21 @@
 
 int main()
 {
+	int opt;
+	while ((opt = getopt(argc, argv, "t")) != -1) {
+        switch (opt) {
+        case 't':
+            /* Run automated unit testing */
+            printf("Running automated unit testing\n");
+            start_automated_testing();
+            printf("Automated testing has completed\n");
+            return 1;
+            break;
+		default:
+            printf("Executable file of appplication will be placed here ");
+            break;
+		}
+	}
 	user loginuser;
 	user* loginuserptr = NULL;
 	char c;
