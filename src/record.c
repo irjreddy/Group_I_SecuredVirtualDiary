@@ -3,6 +3,11 @@
 #include <string.h>
 #include <time.h>
 
+#include <sys/stat.h>
+#include <sys/types.h>
+
+
+
 #include "../include/record.h"
 
 
@@ -94,6 +99,9 @@ void addRecord(user *loginptr){ //create a new record
 int deleteRecord(user *loginptr){
 	char filename[50] ="";
 	char foldername[50]="./records/";
+	char name[50] = "./";
+	strcat(name,loginptr->username);
+	strcat(name,"/records/");
 	FILE *fp;
 	 printf("\n Enter date of record to be delted:[dd-mm-yyyy]:");
 				getchar();
@@ -102,9 +110,10 @@ int deleteRecord(user *loginptr){
 				 filename[strlen(filename)-1] = '\0';
 				
 				snprintf(filename, sizeof(filename), "%s.txt", filename);
-				printf("filen to be delted %s",filename);
-				strcat(foldername,filename);
-                fp = fopen (foldername, "r" ) ;
+				
+				strcat(name,filename);
+
+                fp = fopen (name, "r" ) ;
 
                 if ( fp == NULL )
 
@@ -130,6 +139,10 @@ int deleteRecord(user *loginptr){
 int viewRecord(user *loginptr){
 char filename[100] ="";
 char foldername[50]="./records/";
+char name[50] = "./";
+	strcat(name,loginptr->username);
+	strcat(name,"/records/");
+
 	FILE *recordFile;
 	 printf("\n Enter date of record to be Viewed:[dd-mm-yyyy]:");
 				getchar();
@@ -139,9 +152,9 @@ char foldername[50]="./records/";
 				
 				snprintf(filename, sizeof(filename), "%s.txt",filename);
 				
-				strcat(foldername,filename);
+				strcat(name,filename);
 				//printf("file tobe viewed name is %s",foldername);
-                recordFile = fopen (foldername, "r" ) ;
+                recordFile = fopen (name, "r" ) ;
 				
                 if ( recordFile == NULL )
 
@@ -177,6 +190,11 @@ int editRecord(user *loginptr){
 	char filename[50] ="";
 	char foldername[50]="./records/";
 	char firstline[200]="";
+
+	char name[50] = "./";
+	strcat(name,loginptr->username);
+	strcat(name,"/records/");
+
 	FILE *fp;
 	red();
 	 printf("\n Enter date of record to be edited:[dd-mm-yyyy]:");
@@ -187,8 +205,8 @@ int editRecord(user *loginptr){
 				 filename[strlen(filename)-1] = '\0';
 				
 				snprintf(filename, sizeof(filename), "%s.txt", filename);
-			strcat(foldername,filename);
-                fp = fopen (foldername, "r" ) ;
+			strcat(name,filename);
+                fp = fopen (name, "r" ) ;
 
                 if ( fp == NULL )
 
@@ -226,15 +244,16 @@ int editRecord(user *loginptr){
     fgets(post_subject, sizeof(post_subject),stdin);
 	red();
     printf("Enter Record Now: \n");reset();
-    //clean_stdin();
+    
 	while(*data != 24){ //Enable user to write until he types CTRL + X
 		fgets(data, sizeof(data), stdin);
 		strcat(finalpost, data);
 	}
 
 
-					FILE *postfile = freopen(foldername,"w",fp);
-					fprintf(postfile, firstline); // writing previous date
+					FILE *postfile = freopen(name,"w",fp);
+				fprintf(postfile, "%s",firstline); // writing previous date
+
 
 					
 					finalpost[strlen(finalpost)-1] = '\0'; /*So that no extra char in added in the post*/
@@ -246,9 +265,10 @@ int editRecord(user *loginptr){
 	
 
  					fclose(postfile);
+					 return 0;
 				}
 
-               
+             return 0;  
 
 }
 

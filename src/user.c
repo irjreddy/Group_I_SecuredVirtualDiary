@@ -2,6 +2,8 @@
 
 
 
+int isuser( const char *username,const char *password,user *loginuser);
+
 int signIn(user *loginuser){
 
 	char username[20], password[20];
@@ -47,7 +49,7 @@ int isuser(const char* username, const char* password, user *loginuser){ //Check
     }
 
 	while(!feof(usersfile)){
-		fscanf(usersfile, "%s %s %s", fileusername, filepass,filemail);
+		fscanf(usersfile, "%s %s %s ", fileusername, filepass,filemail);
 		if(strcmp(username, fileusername) == 0 && strcmp(password, filepass) == 0){
             loginuser->line = count;
 			fclose(usersfile);
@@ -92,10 +94,10 @@ void createuser(user *newuser){ //Create a new user
     newuser->username = (char *)malloc(20*sizeof(char));
     newuser->email = (char *)malloc(20*sizeof(char));
     newuser->password = (char *)malloc(20*sizeof(char));
-    newuser->line = (int *)malloc(20*sizeof(int));
+    newuser->line = (int )malloc(20*sizeof(int));
     
 
-    char confirm[20];
+    char *confirm;
 
     printf("\n");
     printf("Sign up : \n");
@@ -122,8 +124,8 @@ void createuser(user *newuser){ //Create a new user
     scanf("%s", newuser->password);
     getchar();
     printf("Confirm password : ");
-    scanf("%s", &confirm);
-    confirm[strlen(confirm)] = '\0';
+    scanf("%s", confirm);
+    
 
     while(strcmp(newuser->password, confirm) != 0){
         printf("The passwords should match\n Please try again \nPassword : ");
@@ -140,7 +142,7 @@ void createuser(user *newuser){ //Create a new user
 void registeruser(user *newuser){ //register a new user
     FILE *usersfile = fopen("users.txt", "a+");
 
-    fprintf(usersfile, "%s %s %s\n", newuser->username, newuser->password, newuser->email);
+    fprintf(usersfile, "%s %s %s \n", newuser->username, newuser->password, newuser->email);
 
 char fileusername[20], filepass[20];
 int count = 0;
@@ -199,66 +201,19 @@ int password(char *check_pass)
 
         printf("\n\n\tENTER THE PASSWORD:");
 
-        pass[0]=getch();
 
-        while(pass[i]!='\r')
-
-        {
-
-            if(pass[i]=='\b')
-
-            {
-
-                i--;
-
-                printf("\b");
-
-                printf(" ");
-
-                printf("\b");
-
-                pass[i]=getch();
-
-            }
-
-            else
-
-            {
-
-                printf("*");
-
-                i++;
-
-                pass[i]=getch();
-
-            }
-
-        }
-
-        pass[i]='\0';
+char username[20], password[20];
+	
+	
+	
+	scanf("%s", password);
+	getchar();
+	printf("\n");
+	
+	
 
         
-
-//         if (fpp==NULL)
-
-//         {
-// fclose(fpp);
-//             printf("\n System error, file missing\n");
-
-//             getch();
-            
-
-//             return 1;
-
-//         }
-
-//         else
-
-//             i=0;
-
-     
-
-        if(strcmp(pass,check_pass)==0)
+        if(strcmp(password,check_pass)==0)
 
         {
 
@@ -281,7 +236,7 @@ int password(char *check_pass)
 
     printf("\n\n\t::YOU ENTERED WRONG PASSWORD::YOU ARE NOT ALLOWED TO ACCESS ANY FILE::\n\n\tPRESS ANY KEY TO GO BACK...");
 
-    getch();
+    getchar();
 
     return 1;
 
@@ -315,9 +270,9 @@ int editPassword(user *loginuserptr)
 
             printf("SYSTEM ERROR...");
 
-            getch();
+            getchar();
 
-            return ;
+            return 0 ;
 
         }
 
@@ -325,7 +280,7 @@ int editPassword(user *loginuserptr)
 
         printf("\n Could not find ther users file, system error ...\nYOUR PASSWORD IS 'ENTER'\n PRESS ENTER TO CHANGE PASSWORD\n\n");
 
-        getch();
+        getchar();
 
     }
 
@@ -337,7 +292,7 @@ int editPassword(user *loginuserptr)
 
     {
 
-        return ;
+        return 0;
 
     }
 
@@ -352,92 +307,29 @@ int editPassword(user *loginuserptr)
             i=0;
 
             choice=0;
+			char  password[20];
 
             printf("\n\n\tENTER THE NEW PASSWORD:");
 
             fflush(stdin);
 
-            pass[0]=getch();
+           
+	scanf("%s", password);
+	getchar();
+	printf("\n");
 
-            while(pass[i]!='\r')
-
-            {
-
-                if(pass[i]=='\b')
-
-                {
-
-                    i--;
-
-                    printf("\b");
-
-                    printf(" ");
-
-                    printf("\b");
-
-                    pass[i]=getch();
-
-                }
-
-                else
-
-                {
-
-                    printf("*");
-
-                    i++;
-
-                    pass[i]=getch();
-
-                }
-
-            }
-
-            pass[i]='\0';
+          
 
             i=0;
 
             printf("\n\tCONFIRM PASSWORD:");
 
-            confirm[0]=getch();
+            scanf("%s", confirm);
+	getchar();
+	printf("\n");
 
-            while(confirm[i]!='\r')
-
-            {
-
-                if(confirm[i]=='\b')
-
-                {
-
-                    i--;
-
-                    printf("\b");
-
-                    printf(" ");
-
-                    printf("\b");
-
-                    confirm[i]=getch();
-
-                }
-
-                else
-
-                {
-
-                    printf("*");
-
-                    i++;
-
-                    confirm[i]=getch();
-
-                }
-
-            }
-
-            confirm[i]='\0';
-
-            if(strcmp(pass,confirm)==0)
+           
+            if(strcmp(password,confirm)==0)
 
             {
 
@@ -449,14 +341,14 @@ int editPassword(user *loginuserptr)
 
                     printf("\n\t\tSYSTEM ERROR");
                     fclose(fp);
-                    getch();
+                    getchar();
 
-                    return ;
+                    return 0;
 
                 }
 
                 i=0;
-fclose(fp);
+				fclose(fp);
                 char fileusername[20], filepass[20], fileemail[20];
                 int count =0;
 
@@ -464,7 +356,7 @@ fclose(fp);
                 FILE* backupfile = fopen("temp.txt", "w");
     
     char buffer[50];
-    char bb[1000];
+    
 
 
 
@@ -472,17 +364,10 @@ fclose(fp);
 	fscanf(usersfile, "%s %s %s ", fileusername, filepass, fileemail);
    
         count++;
-        //fprintf(backupfile,"%s %s %s",fileusername, filepass, fileemail);
        
-        // if(count== loginuserptr->line)
-        // {
-            
-        //      sprintf(buffer,"%s %s %s",loginuserptr->username,pass,loginuserptr->email);
-        //     fputs(buffer,backupfile);
-        // }
 
 		if(strcmp(loginuserptr->username, fileusername) == 0 && strcmp(loginuserptr->password, filepass) == 0){
-            fprintf(backupfile,"%s %s %s \n",fileusername, pass, fileemail);
+            fprintf(backupfile,"%s %s %s \n",fileusername, password, fileemail);
 
 		 }
         else{
@@ -491,27 +376,11 @@ fclose(fp);
         }
 	}
     
-	
-
-    //      while ((fgets(buffer, 1000, usersfile)) != NULL)
-    // {
-    //     count++;
-
-    //     snprintf(bb, 1000, "%s %s %s", loginuserptr->username, pass, loginuserptr->email);
-
-    //     /* If current line is line to replace */
-    //     if (count == loginuserptr->line)
-    //         fputs(bb, backupfile);
-    //     else
-    //         fputs(buffer, backupfile);
-    // }
-	
-
 	fclose(usersfile);
       fclose(fp);
       fclose(backupfile);
-      
-    printf("removing file %d",remove("users.txt"));
+      remove("users.txt");
+    
     
     
     rename("temp.txt","users.txt");
@@ -536,6 +405,7 @@ fclose(fp);
 
     printf("\n\n\tPASSWORD CHANGED...\n\n\tPRESS ANY KEY TO GO BACK...");
 
-    getch();
+    getchar();
+	return 0;
 
 }
