@@ -11,7 +11,7 @@ typedef struct
 	int year;
 }post;
 
-void addRecord();
-int deleteRecord();
-int viewRecord();
-int editRecord();
+void addRecord(user *loginptr);
+int deleteRecord(user *loginptr);
+int viewRecord(user *loginptr);
+int editRecord(user *loginptr);
