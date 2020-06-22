@@ -37,9 +37,10 @@ int isuser(const char* username, const char* password){ //Check if the user exis
 	char fileusername[20], filepass[20];
 
 	FILE* usersfile = fopen("users.txt", "r");
+	char filemail[20];
 
 	while(!feof(usersfile)){
-		fscanf(usersfile, "%s %s", fileusername, filepass);
+		fscanf(usersfile, "%s %s %s", fileusername, filepass,filemail);
 		if(strcmp(username, fileusername) == 0 && strcmp(password, filepass) == 0){
 			fclose(usersfile);
 			return 1;
