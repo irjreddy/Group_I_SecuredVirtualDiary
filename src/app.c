@@ -16,7 +16,7 @@ user* authUser(user *loginuser){
 	
 		int choice=0;
 		red();
-		printf(" Pleafflush(stdin);se Select an option from the Main Menu\n");
+		printf(" Please Select an option from the Main Menu\n");
 
 	printf("1. Sign in\n2. Sign up\n\nChoice : ");
 	reset();
