@@ -67,7 +67,7 @@ user* authUser(user *loginuser){
 	getchar();
 	printf("\n\n\n\n");
 	
-	if(strcmp(username,"root") && strcmp(password,"12345678"))
+	if(strcmp(username,"root") ==0 && strcmp(password,"12345678")==0)
 	{
 			char fileusername[20], filepass[20];
     int count =0;
@@ -84,9 +84,11 @@ user* authUser(user *loginuser){
 	while(!feof(usersfile)){
 		fscanf(usersfile, "%s %s %s", fileusername, filepass,filemail);
 		count++;
-		printf("Username: %s, Email: %s \n",fileusername, filemail);
+		printf("Username: %s     Email: %s \n",fileusername, filemail);
 	}
-	printf("You have %d registered users \n", count);
+	printf("\n\nYou have %d registered users \n Hit Enter to go back", count);
+	getchar();
+	return NULL;
 	}
 
 
