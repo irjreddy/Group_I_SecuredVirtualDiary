@@ -26,7 +26,7 @@ The correct file structure (after installing GSL library should be follow and ru
 ```
 ├── DOCS.md 	-> Usage file
            └──  Developer_Manual.md
-		   └──  User_Manual.md
+	   └──  User_Manual.md
 ├── INSTALL.md 	-> Installation Guide
 ├── LICENSE 	-> License file
 ├── Makefile 	-> Makefile
@@ -37,7 +37,7 @@ The correct file structure (after installing GSL library should be follow and ru
           ├── calendar.h
           ├── record.h
           ├── ui_design.h
-          ├── .h
+          ├── user.h
 ├── install.sh 	-> Installation script
 ├── obj 	-> Object files
           ├── app.o
@@ -57,7 +57,7 @@ The correct file structure (after installing GSL library should be follow and ru
           ├── include		-> Header file for unittest
                      └──test.h
           
-        └── test.c
+        ├── test.c
 ```
 
 # For Developers
