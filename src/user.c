@@ -1,5 +1,5 @@
 #include "../include/user.h"
-
+#include "../include/ui_design.h"
 
 
 int isuser( const char *username,const char *password,user *loginuser);
@@ -10,11 +10,12 @@ int signIn(user *loginuser){
 	loginuser->username = malloc(20*sizeof(char));
 	loginuser->password = malloc(20*sizeof(char));
 	
-
-	printf("Username : ");
+	red();
+	printf("Username : ");reset();
 	scanf("%s", username);
 	getchar();
-	printf("Password : ");
+	red();
+	printf("Password : ");reset();
 	scanf("%s", password);
 	getchar();
 	printf("\n\n\n\n");
@@ -71,7 +72,7 @@ int availableuser(const char *username){ //Check if username already exists
 
 	if(usersfile != NULL){
 
-while(!feof(usersfile)){
+	while(!feof(usersfile)){
         fscanf(usersfile, "%s %s %s", taken, takenpass, fileusername);
         
         if(strcmp(username, taken) == 0){
@@ -108,12 +109,17 @@ void createuser(user *newuser){ //Create a new user
     scanf("%s", newuser->username);
     getchar();
     
+	 FILE* usersfile = fopen("users.txt", "r");
+	 if(usersfile != NULL)
+	 {
+		while(!availableuser(newuser->username)){
+				printf("Username is taken\nPick another one : ");
+				scanf("%s", newuser->username);
+				getchar();
+			}
+	 }
 
-    while(!availableuser(newuser->username)){
-        printf("Username is taken\nPick another one : ");
-        scanf("%s", newuser->username);
-        getchar();
-    }
+   
     
 	    printf("Email : ");
     scanf("%s", newuser->email);
@@ -190,10 +196,6 @@ return 0;
 int password(char *check_pass)
 
 {
-
-    
-
-    
 
     int i=0,j;
 

@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include "../include/app.h"
+#include "../include/ui_design.h"
 
 // #include "../include/calendar.h"
 
@@ -13,15 +14,17 @@
 user* authUser(user *loginuser){ 
 
 	
-		unsigned short choice;
+		int choice=0;
 		red();
 		printf(" Please Select an option from the Main Menu\n");
 
 	printf("1. Sign in\n2. Sign up\n\nChoice : ");
-
-	while(scanf("%hi", &choice) != 1 || choice < 1 || choice > 2){
+	reset();
+	while(scanf("%d", &choice) != 1 || choice < 1 || choice > 2){
 		getchar(); 
-		printf("Wrong Choice \nPlease choose option between 1 and 2 \nChoice : ");
+		red();
+		printf("Wrong Choice \nPlease choose option between 1 and 2 \nChoice : ");reset();
+		fflush(stdin);
 	}
 	getchar();
 	
@@ -30,7 +33,8 @@ user* authUser(user *loginuser){
 		int login = signIn(loginuser);
 
 		if(login){ //--> if(login == 1)
-	 		printf(" === Welcome %s ! ===\n\n", loginuser->username);
+			red();
+	 		printf(" === Welcome %s ! ===\n\n", loginuser->username);reset();
 		} 
 		else {
 	 		printf("Can't login \n Would you like to create an Account?\n");
