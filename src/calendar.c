@@ -56,7 +56,7 @@ int runCalendar(user *loginptr)
         while(1)
         {
         gotoxy(20,20);printf("(*) Use LEFT, RIGHT, UP and DOWN arrow.");
-        gotoxy(20,22);printf("(*) Press P to go to particular year and month.");
+        
         gotoxy(20,24);printf("(*) Press ESC to Exit.");
         ch=getkey();
         switch(ch)
