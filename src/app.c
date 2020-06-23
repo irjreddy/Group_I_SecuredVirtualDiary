@@ -1,3 +1,14 @@
+/**
+ * @file app.c
+ *
+ * @brief This is the application file which is used to link everything in the project.
+ * 
+ * @author Akhil Dama - akhildama@cmail.carleton.ca
+ * @author Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca
+ * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
+ * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
+ */
+
 #include<stdio.h>
 #include "../include/app.h"
 #include "../include/ui_design.h"
