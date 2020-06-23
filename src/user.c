@@ -63,10 +63,10 @@ int isuser(const char* username, const char* password, user *loginuser){ //Check
 
 
 
-int availableuser(const char *username){ //Check if pseudo already exists
+int availableuser(const char *username){ //Check if username already exists
     char taken[20],  takenpass[20], fileusername[20];
 
-    int age;
+    
     FILE* usersfile = fopen("users.txt", "r");
 
 	if(usersfile != NULL){
@@ -97,7 +97,7 @@ void createuser(user *newuser){ //Create a new user
     newuser->line = (int )malloc(20*sizeof(int));
     
 
-    char *confirm;
+    char confirm[20];
 
     printf("\n");
     printf("Sign up : \n");
@@ -110,7 +110,7 @@ void createuser(user *newuser){ //Create a new user
     
 
     while(!availableuser(newuser->username)){
-        printf("Username is taken\n pick another one : ");
+        printf("Username is taken\nPick another one : ");
         scanf("%s", newuser->username);
         getchar();
     }
@@ -128,7 +128,7 @@ void createuser(user *newuser){ //Create a new user
     
 
     while(strcmp(newuser->password, confirm) != 0){
-        printf("The passwords should match\n Please try again \nPassword : ");
+        printf("The passwords should match\nPlease try again \nPassword : ");
         scanf("%s", newuser->password);
         getchar();
         printf("Confirm : \n");
@@ -140,23 +140,31 @@ void createuser(user *newuser){ //Create a new user
 
 
 void registeruser(user *newuser){ //register a new user
-    FILE *usersfile = fopen("users.txt", "a+");
-
-    fprintf(usersfile, "%s %s %s \n", newuser->username, newuser->password, newuser->email);
-
-char fileusername[20], filepass[20];
-int count = 0;
-rewind(usersfile);
-
-	while(!feof(usersfile)){
-		fscanf(usersfile, "%s %s", fileusername, filepass);
-        count++;
-		if(strcmp(newuser->username, fileusername) == 0 && strcmp(newuser->password, filepass) == 0){
-			fclose(usersfile);
-			newuser->line = count;
-            break;
-		}
+	
+    FILE *usersfile = fopen("users.txt", "a");
+	if(usersfile == NULL)
+	{
+		printf("Cloud not create an user");
 	}
+	else{
+fprintf(usersfile, "%s %s %s \n", newuser->username, newuser->password, newuser->email);
+	}
+
+    
+
+// char fileusername[20], filepass[20];
+// int count = 0;
+// rewind(usersfile);
+
+// 	while(!feof(usersfile)){
+// 		fscanf(usersfile, "%s %s", fileusername, filepass);
+//         count++;
+// 		if(strcmp(newuser->username, fileusername) == 0 && strcmp(newuser->password, filepass) == 0){
+// 			fclose(usersfile);
+// 			newuser->line = count;
+//             break;
+// 		}
+// 	}
 
     
 
@@ -183,9 +191,9 @@ int password(char *check_pass)
 
 {
 
-    char pass[15]= {0},check[15]= {0},ch;
+    
 
-    FILE *fpp;
+    
 
     int i=0,j;
 
@@ -202,9 +210,8 @@ int password(char *check_pass)
         printf("\n\n\tENTER THE PASSWORD:");
 
 
-char username[20], password[20];
 	
-	
+	char  password[20];
 	
 	scanf("%s", password);
 	getchar();
@@ -250,7 +257,7 @@ int editPassword(user *loginuserptr)
 
     printf("\n");
 
-    char pass[15]= {0},confirm[15]= {0},ch;
+    char confirm[15]= {0};
 
     int choice,i,check;
 
@@ -355,7 +362,7 @@ int editPassword(user *loginuserptr)
 	            FILE* usersfile = fopen("users.txt", "r");
                 FILE* backupfile = fopen("temp.txt", "w");
     
-    char buffer[50];
+   
     
 
 

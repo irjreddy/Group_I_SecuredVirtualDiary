@@ -21,27 +21,34 @@ int main(int argc, char* argv[])
         switch (opt) {
         case 't':
             /* Run automated unit testing */
+			red();
             printf("Running automated unit testing\n");
+			reset();
           //  start_automated_testing();
+		  red();
             printf("Automated testing has completed\n");
+			reset();
             return 1;
             break;
 		default:
-            printf("Executable file of appplication will be placed here ");
+			red();
+            printf("Executable file of appplication will be placed here ");reset();
             break;
 		}
 	}
 	user loginuser;
 	user* loginuserptr = NULL;
-	char c;
+	
 
 		loading();
 		CLEAR
 		welcome_screen(); // show welcome page
 		sleep(3);
 		CLEAR
+		red();
 		printf("********   Welcome To your Secured Virtual Diary   ********\n");
-		int user=0;
+		reset();
+		
 		do {
 
 			 loginuserptr = authUser(&loginuser);

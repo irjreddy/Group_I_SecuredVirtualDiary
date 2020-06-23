@@ -9,19 +9,9 @@
 
 
 #include "../include/record.h"
+#include "../include/ui_design.h"
 
 
-void red () {
-  printf("\033[1;31m");
-}
-
-void yellow() {
-  printf("\033[1;33m");
-}
-
-void reset () {
-  printf("\033[0m");
-}
 
 void clean_stdin(){ //clean the buffer
     int c;
@@ -138,18 +128,22 @@ int deleteRecord(user *loginptr){
 
 int viewRecord(user *loginptr){
 char filename[100] ="";
-char foldername[50]="./records/";
+
 char name[50] = "./";
 	strcat(name,loginptr->username);
 	strcat(name,"/records/");
 
 	FILE *recordFile;
-	 printf("\n Enter date of record to be Viewed:[dd-mm-yyyy]:");
+	red();
+	 printf("\nEnter date of record to be Viewed:[dd-mm-yyyy]:");
+	 
+	 reset();
 				getchar();
 				
                 fgets(filename,sizeof(filename),stdin);
 				 filename[strlen(filename)-1] = '\0';
-				
+				 
+				printf("\n\n");
 				snprintf(filename, sizeof(filename), "%s.txt",filename);
 				
 				strcat(name,filename);
@@ -160,8 +154,9 @@ char name[50] = "./";
 
                 {
 
-                    printf("\n Sorry, file does not exists, please check date entered!");
-
+					red();
+                    printf("\nSorry, file does not exists, please check date entered!\n");
+					reset();
                 
                     return -1 ;
 
@@ -178,6 +173,8 @@ char c = 'c';
 			continue;
 		printf("%c", c);
 	}
+
+	printf("\n\n");
 	
 	fclose(recordFile);
 return 0;
@@ -188,7 +185,7 @@ int editRecord(user *loginptr){
 	char finalpost[500] = "";
 	char post_subject[50]="";
 	char filename[50] ="";
-	char foldername[50]="./records/";
+	
 	char firstline[200]="";
 
 	char name[50] = "./";
@@ -197,7 +194,7 @@ int editRecord(user *loginptr){
 
 	FILE *fp;
 	red();
-	 printf("\n Enter date of record to be edited:[dd-mm-yyyy]:");
+	 printf("\nEnter date of record to be edited:[dd-mm-yyyy]:");
 	 getchar();
 				
 				reset();
@@ -220,7 +217,7 @@ int editRecord(user *loginptr){
                 }
 				else{
 					red();
-					printf("\n \n Your old Record is: \n \n");
+					printf("\n \n Your old Record is: \n \n \n");
 					reset();
 					char c = 'c';
 					fgets(firstline,200,fp);
@@ -230,8 +227,11 @@ int editRecord(user *loginptr){
 						if(c == 24)
 							continue;
 						printf("%c", c);
-					}
+					
+				}
+				printf("\n \n \n");
 					getchar();
+
 	red();
 	printf("\n Enter your new record now \n \n");
 	printf("This is your Editor, you can type anything");
@@ -251,7 +251,7 @@ int editRecord(user *loginptr){
 	}
 
 
-					FILE *postfile = freopen(name,"w",fp);
+				FILE *postfile = freopen(name,"w",fp);
 				fprintf(postfile, "%s",firstline); // writing previous date
 
 

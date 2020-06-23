@@ -17,7 +17,7 @@
 // #include<conio.h>
 
 #include<string.h>
-#include<windows.h>
+
 #include <ctype.h>
 #include <unistd.h>
 #include<time.h>
@@ -27,8 +27,7 @@
 
 #include "../include/app.h"
 #include "../include/ui_design.h"
-//#include "../include/record.h"
-//#include "../include/user.h"
+
 #include "./include/test.h"
  
 #ifdef _WIN32	//If in windows
@@ -37,15 +36,7 @@
 	#define CLEAR system("clear");	//If linux/Mac
 #endif
 
-// typedef struct
-// {
-// 	char *username;
-// 	char *email;
-	
-// 	char *password;
-	
-// 	int isLoggedIn;
-// }user;
+ 
 
 /**
  * Macro to print out 'passed'/'failed' based on the boolean value of what was
@@ -98,24 +89,26 @@ void automated_user_signup_signin_testing(){
      printf("SignIn function has been tested succesfully");
 
 
-   // createuser(&newuser);
-   // registeruser(&newuser);
+  
 
 
 }
 void automated_testing_records(){
 
     middle1(); pre(4);printf("Testing Add Records function\n");
-    addRecord();
+    user loginuser;
+    loginuser.username = "test_username";
+    loginuser.password = "test_password";
+    addRecord(&loginuser);
 
     middle1(); pre(4);printf("Testing the view record functon\n");
-    viewRecord();
+    viewRecord(&loginuser);
 
     middle1(); pre(4);printf(" Testing  the Edit Records\n");
-    editRecord();
+    editRecord(&loginuser);
 
     middle1(); pre(4);printf("Testing the delete record function\n");
-    deleteRecord();
+    deleteRecord(&loginuser);
 }
 
 

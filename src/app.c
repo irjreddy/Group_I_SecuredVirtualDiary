@@ -14,6 +14,7 @@ user* authUser(user *loginuser){
 
 	
 		unsigned short choice;
+		red();
 		printf(" Please Select an option from the Main Menu\n");
 
 	printf("1. Sign in\n2. Sign up\n\nChoice : ");
@@ -45,7 +46,7 @@ int userMenu(){ // displays User Menu, then returns the selected option
 	int option;
 
 	
-printf(" Please Select an option from the User menu\n");
+printf("Please Select an option from the User menu\n");
 	printf("\t[1] Add Todays Record \n"); // SHOULD LINK RECORD.C ADDRECORD() FUNCTION LATER ON
 
 	printf("\t[2] View Previous Records\n");
@@ -62,26 +63,12 @@ printf(" Please Select an option from the User menu\n");
 	//if user enter something that is not the option, we show error
 	while(scanf("%d", &option) !=1 || option<1 || option >7)
 	{
-		printf(" Sorry, Please select a valid choice from the above!");
+		printf("Sorry, Please select a valid choice from the above!");
 	}
 
 	return option;
 }
 
-
-
-// int execMainMenuChoice(int choice){
-// 	switch(choice)
-// 	{
-// 		case 1:
-// 		return signIn(user *loginuser);
-// 		break;
-// 		case 2:
-// 		return signUp();
-// 		break;
-// 	}
-// 	return 0;
-// }
 
 void execUserMenuChoice(int choice, user *loginptr){
 
