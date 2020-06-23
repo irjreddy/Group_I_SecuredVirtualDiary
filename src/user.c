@@ -1,3 +1,13 @@
+/**
+ * @file user.c
+ *
+ * @brief This is the file where all the user related auth, sign, sign up will be handled here
+ * 
+ * @author Akhil Dama - akhildama@cmail.carleton.ca
+ * @author Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca
+ * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
+ * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
+ */
 #include "../include/user.h"
 #include "../include/ui_design.h"
 
@@ -189,7 +199,7 @@ return 0;
 
 
 
-int password(char *check_pass)
+int check_password(char *check_pass)
 
 {
 
@@ -291,7 +301,7 @@ int editPassword(user *loginuserptr)
 
     fclose(fp);
 
-    check=password(loginuserptr->password);
+    check=check_password(loginuserptr->password);
 
     if(check==1)
 
@@ -386,7 +396,9 @@ int editPassword(user *loginuserptr)
       fclose(backupfile);
       if(remove("users.txt")==-1 || rename("temp.txt","users.txt")==-1)
       {
-          printf("System Error: Password change failed, try again later");
+          printf("System Error: Password change failed, restart the application to resolve");
+            getchar();
+	        return 0;
       }
 
             }

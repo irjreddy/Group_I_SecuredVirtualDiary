@@ -1,3 +1,14 @@
+/**
+ * @file main.c
+ *
+ * @brief Implementation of the main portion of the application.
+ * 
+ * @author Akhil Dama - akhildama@cmail.carleton.ca
+ * @author Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca
+ * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
+ * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
+ */
+
 #include <stdio.h>
 #include <ctype.h>
 #include <unistd.h>
@@ -49,20 +60,21 @@ int main(int argc, char* argv[])
 		fflush(stdin);
 		printf("********   Welcome To your Secured Virtual Diary   ********\n");
 		reset();
-		
+		log:
 		do {
 
 			 loginuserptr = authUser(&loginuser);
 			
-
 			
-		}while(loginuserptr == NULL);  //user == NULL
+			
+		}while(loginuserptr == NULL || loginuserptr->isLoggedIn==0);  //user == NULL
 
 		do {
-			int choice = userMenu();
-			execUserMenuChoice(choice,loginuserptr);
-		}while(1);
-		
+						int choice = userMenu();
+						execUserMenuChoice(choice,loginuserptr);
+					}while(loginuserptr->isLoggedIn==1);
+					loginuserptr = NULL;
+		goto log;
 
 	return 0;
 }
