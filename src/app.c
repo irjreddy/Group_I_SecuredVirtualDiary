@@ -29,9 +29,9 @@ user* authUser(user *loginuser){
 		red();
 		printf("Please Select an option from the Main Menu\n");
 
-	printf("1. Sign in\n2. Sign up\n\nChoice : ");
+	printf("1. Sign in\n2. Sign up\n3. Admin Login\nChoice : ");
 	reset();
-	while(scanf("%d", &choice) != 1 || choice < 1 || choice > 2){
+	while(scanf("%d", &choice) != 1 || choice < 1 || choice > 3){
 		getchar(); 
 		red();
 		printf("Wrong Choice \nPlease choose option between 1 and 2 \nChoice : ");reset();
@@ -51,6 +51,49 @@ user* authUser(user *loginuser){
 	 		printf("Can't login \n Would you like to create an Account?\n");
 	 		return NULL;
 	 	}
+	}else if(choice == 3)
+	{
+		
+	char username[20], password[20];
+	
+	
+	red();
+	printf("Username : ");reset();
+	scanf("%s", username);
+	getchar();
+	red();
+	printf("Password : ");reset();
+	scanf("%s", password);  
+	getchar();
+	printf("\n\n\n\n");
+	
+	if(strcmp(username,"root") ==0 && strcmp(password,"12345678")==0)
+	{
+			char fileusername[20], filepass[20];
+    int count =0;
+
+	FILE* usersfile = fopen("users.txt", "r");
+	char filemail[20];
+
+    if(usersfile== NULL)
+    {
+        printf("No Users Found");
+        return NULL;
+    }
+
+	while(!feof(usersfile)){
+		fscanf(usersfile, "%s %s %s", fileusername, filepass,filemail);
+		count++;
+		printf("Username: %s     Email: %s \n",fileusername, filemail);
+	}
+	printf("\n\nYou have %d registered users \n Hit Enter to go back", count);
+	getchar();
+	return NULL;
+	}
+
+
+	
+
 	}
 	else signUp(loginuser);
 
