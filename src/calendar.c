@@ -1,12 +1,24 @@
+/**
+ * @file calendar.c
+ *
+ * @brief This file contains all the calendar functionality of the project.
+ * 
+ * @author Akhil Dama - akhildama@cmail.carleton.ca
+ * @author Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca
+ * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
+ * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
+ */
 #include<stdio.h>
 #include<conio.h>
 #include<windows.h>
 #include<time.h>
+#include "../include/user.h"
+#include<unistd.h>
 
 
-int key();
-void displayCalendar(int,int,int,int[]);
-void calendar(int,int);
+int getkey();
+void displayCalendar(int,int,int,int[],user *loginptr);
+void calendar(int,int,user *loginptr);
 
 //-------------- GOTO function definition ----------------------
 void gotoxy(int x,int y)
@@ -267,5 +279,5 @@ void calendar(int nyr,int nmonth, user *loginptr)
             }
 
             tdays=tdays%7; //Finding the remainder of tdays so it can calculate the position to display
-            displayCalendar(nyr,nmonth,tdays,days); 
+            displayCalendar(nyr,nmonth,tdays,days,loginptr); 
 }
