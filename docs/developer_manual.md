@@ -10,9 +10,9 @@ For our project, the clients can be layman person, student, professionals (Docto
 2) The system should display user menu options like add note, view note, edit note and delete note.
 3) While creating Notes, application should include subject/tag.
 4) User should be able to have an overview of his/her recorded notes as a monthly view. 
-5)The application should support admin login page.
+5) The application should support admin login page.
 6) Admin should be able to view number of users along with their user id.
-7)User should be able to sign out from his account. 
+7) User should be able to sign out from his account. 
 8) User should be able to exit from the application.
 9) User should be able to change the password if necessary.
 
