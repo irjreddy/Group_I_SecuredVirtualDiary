@@ -386,7 +386,9 @@ int editPassword(user *loginuserptr)
       fclose(backupfile);
       if(remove("users.txt")==-1 || rename("temp.txt","users.txt")==-1)
       {
-          printf("System Error: Password change failed, try again later");
+          printf("System Error: Password change failed, restart the application to resolve");
+            getchar();
+	        return 0;
       }
 
             }

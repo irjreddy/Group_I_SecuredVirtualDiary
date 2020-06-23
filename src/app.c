@@ -58,7 +58,8 @@ printf("Please Select an option from the User menu\n");
 	printf("\t[4] Delete Records\n");  // should link delete function when switch case is ready
 	printf("\t[5] Monthly CalenderView \n");
 	printf("\t[6] Edit Password \n");
-	printf("\t[7] Exit \n"); // this option will be available in release 2
+	printf("\t[7] Signout \n");
+	printf("\t[8] Exit From Application\n"); // this option will be available in release 2
 
 	printf("Please Enter your Choice : ");
 
@@ -106,6 +107,11 @@ void execUserMenuChoice(int choice, user *loginptr){
 		break;
 
 		case 7:
+		loginptr->isLoggedIn =0;
+		//signout(loginptr);
+		break;
+
+		case 8:
 		exit(0);
 		break;
 		
