@@ -17,7 +17,7 @@ Installation steps are mentioned in [INSTALL.md]
 # Usage
 
 To run, you must first install it. Then you can follow instructions mentioned in
-[User_Manual.md]https://github.com/irjreddy/Group_I_SecuredVirtualDiary/blob/dev/docs/user_manual.md
+[User_Manual.md](https://github.com/irjreddy/Group_I_SecuredVirtualDiary/blob/dev/docs/user_manual.md)
 
 # File Structure
 
