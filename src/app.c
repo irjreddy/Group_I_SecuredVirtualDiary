@@ -2,7 +2,7 @@
 #include "../include/app.h"
 #include "../include/ui_design.h"
 
-// #include "../include/calendar.h"
+#include "../include/calendar.h"
 
 #ifdef _WIN32	//If in windows
 	#define CLEAR system("cls");
@@ -97,8 +97,8 @@ void execUserMenuChoice(int choice, user *loginptr){
 		break;
 
 		case 5:
-		// runCalendar(loginptr);
-		// 		CLEAR
+		runCalendar(loginptr);
+				CLEAR
 		break;
 
 		case 6:
