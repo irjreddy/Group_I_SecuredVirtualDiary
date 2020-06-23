@@ -41,7 +41,7 @@ char *week[]={"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
 
 
 
-int runCalendar()
+int runCalendar(user *loginptr)
 {
      int nmonth,nyr,ch;
     
@@ -52,11 +52,11 @@ int runCalendar()
 	nmonth = (int)lt->tm_mon+1;
 	nyr =  (int)lt->tm_year+1900;
        while(1){
-        calendar(nyr,nmonth);
+        calendar(nyr,nmonth,loginptr);
         while(1)
         {
         gotoxy(20,20);printf("(*) Use LEFT, RIGHT, UP and DOWN arrow.");
-        gotoxy(20,22);printf("(*) Press P to go to particular year and month.");
+        
         gotoxy(20,24);printf("(*) Press ESC to Exit.");
         ch=getkey();
         switch(ch)
@@ -73,12 +73,12 @@ int runCalendar()
                 {
                     nmonth++;
                 }
-                calendar(nyr,nmonth);
+                calendar(nyr,nmonth,loginptr);
                 break;
         case 77: //-------- RIGHT ARROW ----------
             //Increasing Year
                 nyr++;
-                calendar(nyr,nmonth);
+                calendar(nyr,nmonth,loginptr);
                 break;
         case 72: //------- UP ARROW -------------
             // Decreasing Month
@@ -90,7 +90,7 @@ int runCalendar()
                 }
                 else
                     nmonth--;
-                calendar(nyr,nmonth);
+                calendar(nyr,nmonth,loginptr);
                 break;
         case 75: //-------- LEFT ARROW ----------
             //Decreasing year
@@ -102,7 +102,7 @@ int runCalendar()
                 else
                 {
                     nyr--;
-                    calendar(nyr,nmonth);
+                    calendar(nyr,nmonth,loginptr);
                 }
 
                 break;
@@ -129,7 +129,7 @@ int runCalendar()
 }
 
 //============== DISPLAYING THE  CALENDAR ===================
-void displayCalendar(int nyr,int nmonth,int tdays,int days[])
+void displayCalendar(int nyr,int nmonth,int tdays,int days[], user *loginptr)
 {
     int i,j,pos;
     SetColor(12); //Color red
@@ -169,9 +169,14 @@ void displayCalendar(int nyr,int nmonth,int tdays,int days[])
             SetColor(7); //Changing color to white for all days
     char date_str[100];
     char foldername[100]="./records/";
+
+    char name[50] = "./";
+	strcat(name,loginptr->username);
+	strcat(name,"/records/");
+
 	snprintf(date_str, sizeof(date_str), "%d-%d-%d.txt", i+1,nmonth,nyr);
-    strcat(foldername,date_str);
-        FILE *fp = fopen(foldername,"r");
+    strcat(name,date_str);
+        FILE *fp = fopen(name,"r");
         if(fp == NULL){
            gotoxy(pos,j);printf("Missing"); 
         }
@@ -233,7 +238,7 @@ int getkey()
 }
 
 
-void calendar(int nyr,int nmonth)
+void calendar(int nyr,int nmonth, user *loginptr)
 {
     int days[12]={31,28,31,30,31,30,31,31,30,31,30,31};
     int tdays=0,k,myear;
