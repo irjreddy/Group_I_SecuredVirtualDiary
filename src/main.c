@@ -1,3 +1,14 @@
+/**
+ * @file main.c
+ *
+ * @brief Implementation of the main portion of the application.
+ * 
+ * @author Akhil Dama - akhildama@cmail.carleton.ca
+ * @author Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca
+ * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
+ * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
+ */
+
 #include <stdio.h>
 #include <ctype.h>
 #include <unistd.h>
