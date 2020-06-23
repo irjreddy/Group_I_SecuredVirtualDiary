@@ -4,3 +4,5 @@
 #include<time.h>
 
 int runCalendar();
+void displayCalendar(int,int,int,int[]);
+void calendar(int,int);

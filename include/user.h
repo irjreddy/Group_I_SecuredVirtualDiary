@@ -21,3 +21,10 @@ int signIn(user *loginuser);
 int signUp(user *newuser);
 
 int editPassword(user *loginptr);
+
+int isuser( const char *username,const char *password,user *loginuser);
+int availableuser(const char *username);
+
+void createuser(user *newuser);
+
+int check_password(char*);

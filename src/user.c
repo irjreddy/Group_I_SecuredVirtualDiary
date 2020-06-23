@@ -189,7 +189,7 @@ return 0;
 
 
 
-int password(char *check_pass)
+int check_password(char *check_pass)
 
 {
 
@@ -291,7 +291,7 @@ int editPassword(user *loginuserptr)
 
     fclose(fp);
 
-    check=password(loginuserptr->password);
+    check=check_password(loginuserptr->password);
 
     if(check==1)
 
