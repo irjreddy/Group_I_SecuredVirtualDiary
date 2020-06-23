@@ -1,3 +1,13 @@
+/**
+ * @file user.c
+ *
+ * @brief This is the file where all the user related auth, sign, sign up will be handled here
+ * 
+ * @author Akhil Dama - akhildama@cmail.carleton.ca
+ * @author Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca
+ * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
+ * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
+ */
 #include "../include/user.h"
 #include "../include/ui_design.h"
 
