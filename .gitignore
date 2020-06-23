@@ -4,4 +4,7 @@ a.exe
 record.h.gch
 a.out
 *.txt
-7-6-2020.txt
+/records
+/bin
+/obj
+

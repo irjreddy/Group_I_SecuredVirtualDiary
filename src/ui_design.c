@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
+#include<unistd.h>
 
 #ifdef _WIN32	//If in windows
 	#define CLEAR system("cls");
@@ -129,4 +130,16 @@ void middle1(void){
 }
 void middtab1(void){
 	printf("\t\t\t\t\t");
+}
+
+void red () {
+  printf("\033[1;31m");
+}
+
+void yellow() {
+  printf("\033[1;33m");
+}
+
+void reset () {
+  printf("\033[0m");
 }
