@@ -5,4 +5,5 @@ record.h.gch
 a.out
 *.txt
 /records
+/bin
 

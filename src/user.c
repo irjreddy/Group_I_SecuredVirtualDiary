@@ -16,7 +16,10 @@ int signIn(user *loginuser){
 	getchar();
 	red();
 	printf("Password : ");reset();
-	scanf("%s", password);
+	scanf("%s", password);  
+    
+
+
 	getchar();
 	printf("\n\n\n\n");
 	
@@ -50,7 +53,7 @@ int isuser(const char* username, const char* password, user *loginuser){ //Check
     }
 
 	while(!feof(usersfile)){
-		fscanf(usersfile, "%s %s %s ", fileusername, filepass,filemail);
+		fscanf(usersfile, "%s %s %s", fileusername, filepass,filemail);
 		if(strcmp(username, fileusername) == 0 && strcmp(password, filepass) == 0){
             loginuser->line = count;
 			fclose(usersfile);
@@ -129,6 +132,14 @@ void createuser(user *newuser){ //Create a new user
     printf("Password : ");
     scanf("%s", newuser->password);
     getchar();
+while(strlen(newuser->password)<8)
+    {
+        printf("Password should be more than 8 characters! \n");
+        red();
+	    printf("Password : ");reset();
+	    scanf("%s", newuser->password);  
+    }
+
     printf("Confirm password : ");
     scanf("%s", confirm);
     
@@ -156,21 +167,6 @@ void registeruser(user *newuser){ //register a new user
 fprintf(usersfile, "%s %s %s \n", newuser->username, newuser->password, newuser->email);
 	}
 
-    
-
-// char fileusername[20], filepass[20];
-// int count = 0;
-// rewind(usersfile);
-
-// 	while(!feof(usersfile)){
-// 		fscanf(usersfile, "%s %s", fileusername, filepass);
-//         count++;
-// 		if(strcmp(newuser->username, fileusername) == 0 && strcmp(newuser->password, filepass) == 0){
-// 			fclose(usersfile);
-// 			newuser->line = count;
-//             break;
-// 		}
-// 	}
 
     
 
@@ -377,7 +373,7 @@ int editPassword(user *loginuserptr)
 
 		if(strcmp(loginuserptr->username, fileusername) == 0 && strcmp(loginuserptr->password, filepass) == 0){
             fprintf(backupfile,"%s %s %s \n",fileusername, password, fileemail);
-
+            loginuserptr->password = password;
 		 }
         else{
            // fputs(buffer,backupfile);
@@ -388,12 +384,10 @@ int editPassword(user *loginuserptr)
 	fclose(usersfile);
       fclose(fp);
       fclose(backupfile);
-      remove("users.txt");
-    
-    
-    
-    rename("temp.txt","users.txt");
-              
+      if(remove("users.txt")==-1 || rename("temp.txt","users.txt")==-1)
+      {
+          printf("System Error: Password change failed, try again later");
+      }
 
             }
 

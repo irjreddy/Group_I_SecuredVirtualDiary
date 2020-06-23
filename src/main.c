@@ -46,6 +46,7 @@ int main(int argc, char* argv[])
 		sleep(3);
 		CLEAR
 		red();
+		fflush(stdin);
 		printf("********   Welcome To your Secured Virtual Diary   ********\n");
 		reset();
 		
