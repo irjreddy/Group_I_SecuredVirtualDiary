@@ -4,7 +4,7 @@ Secured Virtual Diary is an note taking application where customers can store  t
 
 # Installation
 
-Please refer to INSTALL.md file for installation instructions.
+Please refer to [INSTALL.md](https://github.com/irjreddy/Group_I_SecuredVirtualDiary/blob/dev/install.md) file for installation instructions.
 
 # Usage
 
