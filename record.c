@@ -141,6 +141,7 @@ char c = 'c';
 	}
 	
 	fclose(recordFile);
+	getchar();
 return 0;
 }
 
