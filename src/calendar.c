@@ -1,3 +1,13 @@
+/**
+ * @file calendar.c
+ *
+ * @brief This file contains all the calendar functionality of the project.
+ * 
+ * @author Akhil Dama - akhildama@cmail.carleton.ca
+ * @author Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca
+ * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
+ * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
+ */
 #include<stdio.h>
 #include<conio.h>
 #include<windows.h>
