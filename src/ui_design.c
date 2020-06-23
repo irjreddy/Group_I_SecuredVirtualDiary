@@ -1,4 +1,13 @@
-
+/**
+ * @file ui_design.c
+ *
+ * @brief In this file we will be handling all the design functionalities of our system
+ * 
+ * @author Akhil Dama - akhildama@cmail.carleton.ca
+ * @author Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca
+ * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
+ * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
+ */
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>

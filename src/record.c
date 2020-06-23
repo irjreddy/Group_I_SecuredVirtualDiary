@@ -1,3 +1,13 @@
+/**
+ * @file record.c
+ *
+ * @brief This is header file which contains all the operations or functions of the user.
+ * 
+ * @author Akhil Dama - akhildama@cmail.carleton.ca
+ * @author Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca
+ * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
+ * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
