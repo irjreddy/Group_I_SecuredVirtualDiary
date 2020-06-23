@@ -5,6 +5,7 @@ In this Project we are developing a notable virtual system which is typically to
 One of the important features in this application is not only the effective usage of notes but also expecting the secured way of accessing by protecting them using passwords.
 
 # Requirement
+
 For our project, the clients can be layman person, student, professionals (Doctors, Engineers, Team Leads, Teachers etc..) and wherever prioritizing of tasks is absolutely beneficial. The following are the requirements needed for the user are mentioned below:
 1) The Application Should be able to create individual user account.
 2) The system should display user menu options like add note, view note, edit note and delete note.
@@ -19,6 +20,7 @@ For our project, the clients can be layman person, student, professionals (Docto
 
 
 # Program Flow
+
 The main.c calls function in app.c which initiates the program flow, app.c acts as the center of the application linking everything together.
 
 ![Diagram](https://github.com/irjreddy/Group_I_SecuredVirtualDiary/blob/dev/assets/program_fow.jpg)
@@ -26,8 +28,8 @@ The main.c calls function in app.c which initiates the program flow, app.c acts 
 
 
 App.c file calls
-	Functions in user.c for authentication, edit password, sign out feature
-	Functions in calendar.c for showcasing the calendar view of the records
-	Functions in record.c for adding, viewing, editing, deleting records 
+	Functions in user.c for authentication, edit password, sign out feature, admin login
+	Functions in calendar.c for showcasing the calendar view of the records entered and missing records
+	Functions in record.c for adding, viewing, editing, deleting records of user
 	
 
