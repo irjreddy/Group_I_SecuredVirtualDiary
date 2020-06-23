@@ -14,7 +14,7 @@
 
 
 
-int main()
+int main(int argc, char* argv[])
 {
 	int opt;
 	while ((opt = getopt(argc, argv, "t")) != -1) {
@@ -22,7 +22,7 @@ int main()
         case 't':
             /* Run automated unit testing */
             printf("Running automated unit testing\n");
-            start_automated_testing();
+          //  start_automated_testing();
             printf("Automated testing has completed\n");
             return 1;
             break;
@@ -52,7 +52,7 @@ int main()
 
 		do {
 			int choice = userMenu();
-			execUserMenuChoice(choice);
+			execUserMenuChoice(choice,loginuserptr);
 		}while(1);
 		
 
