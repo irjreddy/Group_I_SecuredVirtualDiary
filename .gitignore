@@ -6,4 +6,6 @@ a.out
 *.txt
 /records
 /bin
+/obj
+
 
