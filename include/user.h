@@ -11,6 +11,7 @@ typedef struct
 	char *password;
 	
 	int isLoggedIn;
+	int line;
 }user;
 
 
@@ -18,3 +19,5 @@ typedef struct
 int signIn(user *loginuser);
 
 int signUp(user *newuser);
+
+int editPassword(user *loginptr);
