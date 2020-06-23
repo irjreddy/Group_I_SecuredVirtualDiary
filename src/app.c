@@ -16,7 +16,7 @@ user* authUser(user *loginuser){
 	
 		int choice=0;
 		red();
-		printf(" Please Select an option from the Main Menu\n");
+		printf(" Pleafflush(stdin);se Select an option from the Main Menu\n");
 
 	printf("1. Sign in\n2. Sign up\n\nChoice : ");
 	reset();
@@ -24,7 +24,7 @@ user* authUser(user *loginuser){
 		getchar(); 
 		red();
 		printf("Wrong Choice \nPlease choose option between 1 and 2 \nChoice : ");reset();
-		fflush(stdin);
+		
 	}
 	getchar();
 	
@@ -56,9 +56,9 @@ printf("Please Select an option from the User menu\n");
 	printf("\t[2] View Previous Records\n");
 	printf("\t[3] Edit Records\n");
 	printf("\t[4] Delete Records\n");  // should link delete function when switch case is ready
-	printf("\t[5] Search Records \n");
-	printf("\t[6] Monthly CalenderView \n");
-	printf("\t[7] Edit Password \n"); // this option will be available in release 2
+	printf("\t[5] Monthly CalenderView \n");
+	printf("\t[6] Edit Password \n");
+	printf("\t[7] Exit \n"); // this option will be available in release 2
 
 	printf("Please Enter your Choice : ");
 
@@ -67,7 +67,9 @@ printf("Please Select an option from the User menu\n");
 	//if user enter something that is not the option, we show error
 	while(scanf("%d", &option) !=1 || option<1 || option >7)
 	{
+		getchar();
 		printf("Sorry, Please select a valid choice from the above!");
+		fflush(stdin);
 	}
 
 	return option;
@@ -95,18 +97,18 @@ void execUserMenuChoice(int choice, user *loginptr){
 		break;
 
 		case 5:
+		// runCalendar(loginptr);
+		// 		CLEAR
 		break;
 
 		case 6:
-		// runCalendar(loginptr);
-		// 		CLEAR
-		
-		
+		editPassword(loginptr);
 		break;
 
 		case 7:
-		editPassword(loginptr);
+		exit(0);
 		break;
+		
 
 		
 	}

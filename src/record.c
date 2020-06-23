@@ -12,6 +12,7 @@
 #include "../include/ui_design.h"
 
 
+int mkdir(const char *pathname, mode_t mode);
 
 void clean_stdin(){ //clean the buffer
     int c;
