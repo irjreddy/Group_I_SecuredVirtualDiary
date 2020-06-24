@@ -8,6 +8,11 @@
  * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
  * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
  */
+
+#ifndef APP_H
+#define APP_H
+
+
 #include<stdio.h>
 #include "../include/record.h"
 
@@ -45,3 +50,4 @@ void execUserMenuChoice(int choice,user *login);
  */ 
 user* authUser(user *loginuser);
 
+#endif
