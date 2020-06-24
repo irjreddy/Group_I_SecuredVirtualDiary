@@ -15,6 +15,7 @@
 
 #include "../include/app.h"
 #include "../include/ui_design.h"
+#include "../test/include/test.h"
 
 #ifdef _WIN32	//If in windows
 	#define CLEAR system("cls");
@@ -35,7 +36,7 @@ int main(int argc, char* argv[])
 			red();
             printf("Running automated unit testing\n");
 			reset();
-          //  start_automated_testing();
+           start_automated_testing();
 		  red();
             printf("Automated testing has completed\n");
 			reset();
