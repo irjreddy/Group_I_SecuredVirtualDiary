@@ -1,0 +1,83 @@
+.TH "record.c" 3 "Tue Jun 23 2020" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+record.c \- This is header file which contains all the operations or functions of the user\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include '\&.\&./include/record\&.h'\fP
+.br
+\fC#include '\&.\&./include/ui_design\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmkdir\fP (const char *pathname, mode_t mode)"
+.br
+.ti -1c
+.RI "void \fBclean_stdin\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddRecord\fP (user *loginptr)"
+.br
+.ti -1c
+.RI "int \fBdeleteRecord\fP (user *loginptr)"
+.br
+.ti -1c
+.RI "int \fBviewRecord\fP (user *loginptr)"
+.br
+.ti -1c
+.RI "int \fBeditRecord\fP (user *loginptr)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is header file which contains all the operations or functions of the user\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Akhil Dama - akhildama@cmail.carleton.ca 
+.PP
+Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca 
+.PP
+Naveen Billapati- naveenbillapati@cmail.carleton.ca 
+.PP
+Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void addRecord (user * loginptr)"
+
+.SS "void clean_stdin ()"
+
+.SS "int deleteRecord (user * loginptr)"
+
+.SS "int editRecord (user * loginptr)"
+
+.SS "int mkdir (const char * pathname, mode_t mode)"
+
+.SS "int viewRecord (user * loginptr)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

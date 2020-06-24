@@ -1,0 +1,95 @@
+.TH "calendar.c" 3 "Tue Jun 23 2020" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+calendar.c \- This file contains all the calendar functionality of the project\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <conio\&.h>\fP
+.br
+\fC#include <windows\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include '\&.\&./include/user\&.h'\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBgetkey\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisplayCalendar\fP (int, int, int, int[], user *loginptr)"
+.br
+.ti -1c
+.RI "void \fBcalendar\fP (int, int, user *loginptr)"
+.br
+.ti -1c
+.RI "void \fBgotoxy\fP (int x, int y)"
+.br
+.ti -1c
+.RI "void \fBSetColor\fP (int ForgC)"
+.br
+.ti -1c
+.RI "int \fBrunCalendar\fP (user *loginptr)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char * \fBmonth\fP [] ={'January','February','March','April','May','June','July','August','September','October','November','December'}"
+.br
+.ti -1c
+.RI "char * \fBweek\fP [] ={'Mon','Tue','Wed','Thu','Fri','Sat','Sun'}"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file contains all the calendar functionality of the project\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Akhil Dama - akhildama@cmail.carleton.ca 
+.PP
+Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca 
+.PP
+Naveen Billapati- naveenbillapati@cmail.carleton.ca 
+.PP
+Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void calendar (int nyr, int nmonth, user * loginptr)"
+
+.SS "void displayCalendar (int nyr, int nmonth, int tdays, int days[], user * loginptr)"
+
+.SS "int getkey ()"
+
+.SS "void gotoxy (int x, int y)"
+
+.SS "int runCalendar (user * loginptr)"
+
+.SS "void SetColor (int ForgC)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "char* month[] ={'January','February','March','April','May','June','July','August','September','October','November','December'}"
+
+.SS "char* week[] ={'Mon','Tue','Wed','Thu','Fri','Sat','Sun'}"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

@@ -1,0 +1,123 @@
+\hypertarget{calendar_8c}{}\doxysection{calendar.\+c File Reference}
+\label{calendar_8c}\index{calendar.c@{calendar.c}}
+
+
+This file contains all the calendar functionality of the project.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/user.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for calendar.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{calendar_8c_a0e4771af240bfd1fcabc9974fe021791}{getkey}} ()
+\item 
+void \mbox{\hyperlink{calendar_8c_aea42ea688c2c761eed03c695be331b4f}{display\+Calendar}} (int, int, int, int\mbox{[}$\,$\mbox{]}, user $\ast$loginptr)
+\item 
+void \mbox{\hyperlink{calendar_8c_a8cec2a07c8db8e1b8704b01db1699eb5}{calendar}} (int, int, user $\ast$loginptr)
+\item 
+void \mbox{\hyperlink{calendar_8c_ae824443b3f661414ba1f2718e17fe97d}{gotoxy}} (int x, int y)
+\item 
+void \mbox{\hyperlink{calendar_8c_aa7d42b816af66303171116657d399323}{Set\+Color}} (int ForgC)
+\item 
+int \mbox{\hyperlink{calendar_8c_ac35e9521bf02a1f630814799b4798044}{run\+Calendar}} (user $\ast$loginptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{calendar_8c_abccbc24c7569657b2c2af7fcd59d2cc9}{month}} \mbox{[}$\,$\mbox{]} =\{\char`\"{}January\char`\"{},\char`\"{}February\char`\"{},\char`\"{}March\char`\"{},\char`\"{}April\char`\"{},\char`\"{}May\char`\"{},\char`\"{}June\char`\"{},\char`\"{}July\char`\"{},\char`\"{}August\char`\"{},\char`\"{}September\char`\"{},\char`\"{}October\char`\"{},\char`\"{}November\char`\"{},\char`\"{}December\char`\"{}\}
+\item 
+char $\ast$ \mbox{\hyperlink{calendar_8c_ad43be19046286936ce4b4548a0f2317e}{week}} \mbox{[}$\,$\mbox{]} =\{\char`\"{}Mon\char`\"{},\char`\"{}Tue\char`\"{},\char`\"{}Wed\char`\"{},\char`\"{}Thu\char`\"{},\char`\"{}Fri\char`\"{},\char`\"{}Sat\char`\"{},\char`\"{}Sun\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the calendar functionality of the project. 
+
+\begin{DoxyAuthor}{Author}
+Akhil Dama -\/ \href{mailto:akhildama@cmail.carleton.ca}{\texttt{ akhildama@cmail.\+carleton.\+ca}} 
+
+Meher Vishnu Kyatham -\/ \href{mailto:mehervishnukyatham@cmail.carleton.ca}{\texttt{ mehervishnukyatham@cmail.\+carleton.\+ca}} 
+
+Naveen Billapati-\/ \href{mailto:naveenbillapati@cmail.carleton.ca}{\texttt{ naveenbillapati@cmail.\+carleton.\+ca}} 
+
+Rajeshwar Reddy Keesara-\/ \href{mailto:rajeshwarreddykeesar@cmail.carleton.ca}{\texttt{ rajeshwarreddykeesar@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{calendar_8c_a8cec2a07c8db8e1b8704b01db1699eb5}\label{calendar_8c_a8cec2a07c8db8e1b8704b01db1699eb5}} 
+\index{calendar.c@{calendar.c}!calendar@{calendar}}
+\index{calendar@{calendar}!calendar.c@{calendar.c}}
+\doxysubsubsection{\texorpdfstring{calendar()}{calendar()}}
+{\footnotesize\ttfamily void calendar (\begin{DoxyParamCaption}\item[{int}]{nyr,  }\item[{int}]{nmonth,  }\item[{user $\ast$}]{loginptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{calendar_8c_aea42ea688c2c761eed03c695be331b4f}\label{calendar_8c_aea42ea688c2c761eed03c695be331b4f}} 
+\index{calendar.c@{calendar.c}!displayCalendar@{displayCalendar}}
+\index{displayCalendar@{displayCalendar}!calendar.c@{calendar.c}}
+\doxysubsubsection{\texorpdfstring{displayCalendar()}{displayCalendar()}}
+{\footnotesize\ttfamily void display\+Calendar (\begin{DoxyParamCaption}\item[{int}]{nyr,  }\item[{int}]{nmonth,  }\item[{int}]{tdays,  }\item[{int}]{days\mbox{[}$\,$\mbox{]},  }\item[{user $\ast$}]{loginptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{calendar_8c_a0e4771af240bfd1fcabc9974fe021791}\label{calendar_8c_a0e4771af240bfd1fcabc9974fe021791}} 
+\index{calendar.c@{calendar.c}!getkey@{getkey}}
+\index{getkey@{getkey}!calendar.c@{calendar.c}}
+\doxysubsubsection{\texorpdfstring{getkey()}{getkey()}}
+{\footnotesize\ttfamily int getkey (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{calendar_8c_ae824443b3f661414ba1f2718e17fe97d}\label{calendar_8c_ae824443b3f661414ba1f2718e17fe97d}} 
+\index{calendar.c@{calendar.c}!gotoxy@{gotoxy}}
+\index{gotoxy@{gotoxy}!calendar.c@{calendar.c}}
+\doxysubsubsection{\texorpdfstring{gotoxy()}{gotoxy()}}
+{\footnotesize\ttfamily void gotoxy (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{calendar_8c_ac35e9521bf02a1f630814799b4798044}\label{calendar_8c_ac35e9521bf02a1f630814799b4798044}} 
+\index{calendar.c@{calendar.c}!runCalendar@{runCalendar}}
+\index{runCalendar@{runCalendar}!calendar.c@{calendar.c}}
+\doxysubsubsection{\texorpdfstring{runCalendar()}{runCalendar()}}
+{\footnotesize\ttfamily int run\+Calendar (\begin{DoxyParamCaption}\item[{user $\ast$}]{loginptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{calendar_8c_aa7d42b816af66303171116657d399323}\label{calendar_8c_aa7d42b816af66303171116657d399323}} 
+\index{calendar.c@{calendar.c}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!calendar.c@{calendar.c}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily void Set\+Color (\begin{DoxyParamCaption}\item[{int}]{ForgC }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{calendar_8c_abccbc24c7569657b2c2af7fcd59d2cc9}\label{calendar_8c_abccbc24c7569657b2c2af7fcd59d2cc9}} 
+\index{calendar.c@{calendar.c}!month@{month}}
+\index{month@{month}!calendar.c@{calendar.c}}
+\doxysubsubsection{\texorpdfstring{month}{month}}
+{\footnotesize\ttfamily char$\ast$ month\mbox{[}$\,$\mbox{]} =\{\char`\"{}January\char`\"{},\char`\"{}February\char`\"{},\char`\"{}March\char`\"{},\char`\"{}April\char`\"{},\char`\"{}May\char`\"{},\char`\"{}June\char`\"{},\char`\"{}July\char`\"{},\char`\"{}August\char`\"{},\char`\"{}September\char`\"{},\char`\"{}October\char`\"{},\char`\"{}November\char`\"{},\char`\"{}December\char`\"{}\}}
+
+\mbox{\Hypertarget{calendar_8c_ad43be19046286936ce4b4548a0f2317e}\label{calendar_8c_ad43be19046286936ce4b4548a0f2317e}} 
+\index{calendar.c@{calendar.c}!week@{week}}
+\index{week@{week}!calendar.c@{calendar.c}}
+\doxysubsubsection{\texorpdfstring{week}{week}}
+{\footnotesize\ttfamily char$\ast$ week\mbox{[}$\,$\mbox{]} =\{\char`\"{}Mon\char`\"{},\char`\"{}Tue\char`\"{},\char`\"{}Wed\char`\"{},\char`\"{}Thu\char`\"{},\char`\"{}Fri\char`\"{},\char`\"{}Sat\char`\"{},\char`\"{}Sun\char`\"{}\}}
+
