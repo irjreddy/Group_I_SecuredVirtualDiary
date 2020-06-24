@@ -13,7 +13,7 @@
 #include "../include/app.h"
 #include "../include/ui_design.h"
 
-#include "../include/calendar.h"
+
 
 #ifdef _WIN32	//If in windows
 	#define CLEAR system("cls");
@@ -110,10 +110,9 @@ printf("Please Select an option from the User menu\n");
 	printf("\t[2] View Previous Records\n");
 	printf("\t[3] Edit Records\n");
 	printf("\t[4] Delete Records\n");  // should link delete function when switch case is ready
-	printf("\t[5] Monthly CalenderView \n");
-	printf("\t[6] Edit Password \n");
-	printf("\t[7] Signout \n");
-	printf("\t[8] Exit From Application\n"); // this option will be available in release 2
+	printf("\t[5] Edit Password \n");
+	printf("\t[6] Signout \n");
+	printf("\t[7] Exit From Application\n"); // this option will be available in release 2
 
 	printf("Please Enter your Choice : ");
 
@@ -152,20 +151,15 @@ void execUserMenuChoice(int choice, user *loginptr){
 		break;
 
 		case 5:
-		runCalendar(loginptr);
-				CLEAR
-		break;
-
-		case 6:
 		editPassword(loginptr);
 		break;
 
-		case 7:
+		case 6:
 		loginptr->isLoggedIn =0;
 		//signout(loginptr);
 		break;
 
-		case 8:
+		case 7:
 		exit(0);
 		break;
 		

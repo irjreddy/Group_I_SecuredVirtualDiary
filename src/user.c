@@ -335,7 +335,7 @@ int editPassword(user *loginuserptr)
 
           
 
-            i=0;
+           
 
             printf("\n\tCONFIRM PASSWORD:");
 
@@ -362,7 +362,7 @@ int editPassword(user *loginuserptr)
 
                 }
 
-                i=0;
+               
 				fclose(fp);
                 char fileusername[20], filepass[20], fileemail[20];
                 int count =0;
