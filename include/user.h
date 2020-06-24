@@ -8,6 +8,9 @@
  * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
  * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
  */
+#ifndef USER_H
+#define USER_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -112,3 +115,5 @@ void createuser(user *newuser);
  *
  */
 int check_password(char*);
+
+#endif

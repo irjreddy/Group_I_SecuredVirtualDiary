@@ -9,6 +9,10 @@
  * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
  * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
  */
+
+#ifndef RECORD_H
+#define RECORD_H
+
 #include <stdio.h>
 #include "../include/user.h"
 
@@ -66,3 +70,5 @@ int viewRecord(user *loginptr);
  *
  */ 
 int editRecord(user *loginptr);
+
+#endif

@@ -119,7 +119,7 @@ printf("Please Select an option from the User menu\n");
 	
 	
 	//if user enter something that is not the option, we show error
-	while(scanf("%d", &option) !=1 || option<1 || option >7)
+	while(scanf("%d", &option) !=1 || option<1 || option >8)
 	{
 		getchar();
 		printf("Sorry, Please select a valid choice from the above!");
