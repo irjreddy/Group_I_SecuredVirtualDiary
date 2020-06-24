@@ -1,0 +1,81 @@
+\hypertarget{app_8c}{}\doxysection{app.\+c File Reference}
+\label{app_8c}\index{app.c@{app.c}}
+
+
+This is the application file which is used to link everything in the project.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/app.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/ui\+\_\+design.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/calendar.\+h\char`\"{}}\newline
+Include dependency graph for app.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{app_8c_a611cc9b5f655508482f3d7a9751c182a}{C\+L\+E\+AR}}~system(\char`\"{}clear\char`\"{});
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+user $\ast$ \mbox{\hyperlink{app_8c_af3f7cf10e8e78e94822f6392e6e0de9c}{auth\+User}} (user $\ast$loginuser)
+\item 
+int \mbox{\hyperlink{app_8c_a1293988b231379fcd1c61880b91a3117}{user\+Menu}} ()
+\item 
+void \mbox{\hyperlink{app_8c_a9c4c0a6771563699b5ffce9f5104f553}{exec\+User\+Menu\+Choice}} (int choice, user $\ast$loginptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the application file which is used to link everything in the project. 
+
+\begin{DoxyAuthor}{Author}
+Akhil Dama -\/ \href{mailto:akhildama@cmail.carleton.ca}{\texttt{ akhildama@cmail.\+carleton.\+ca}} 
+
+Meher Vishnu Kyatham -\/ \href{mailto:mehervishnukyatham@cmail.carleton.ca}{\texttt{ mehervishnukyatham@cmail.\+carleton.\+ca}} 
+
+Naveen Billapati-\/ \href{mailto:naveenbillapati@cmail.carleton.ca}{\texttt{ naveenbillapati@cmail.\+carleton.\+ca}} 
+
+Rajeshwar Reddy Keesara-\/ \href{mailto:rajeshwarreddykeesar@cmail.carleton.ca}{\texttt{ rajeshwarreddykeesar@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{app_8c_a611cc9b5f655508482f3d7a9751c182a}\label{app_8c_a611cc9b5f655508482f3d7a9751c182a}} 
+\index{app.c@{app.c}!CLEAR@{CLEAR}}
+\index{CLEAR@{CLEAR}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{CLEAR}{CLEAR}}
+{\footnotesize\ttfamily \#define C\+L\+E\+AR~system(\char`\"{}clear\char`\"{});}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{app_8c_af3f7cf10e8e78e94822f6392e6e0de9c}\label{app_8c_af3f7cf10e8e78e94822f6392e6e0de9c}} 
+\index{app.c@{app.c}!authUser@{authUser}}
+\index{authUser@{authUser}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{authUser()}{authUser()}}
+{\footnotesize\ttfamily user$\ast$ auth\+User (\begin{DoxyParamCaption}\item[{user $\ast$}]{loginuser }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{app_8c_a9c4c0a6771563699b5ffce9f5104f553}\label{app_8c_a9c4c0a6771563699b5ffce9f5104f553}} 
+\index{app.c@{app.c}!execUserMenuChoice@{execUserMenuChoice}}
+\index{execUserMenuChoice@{execUserMenuChoice}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{execUserMenuChoice()}{execUserMenuChoice()}}
+{\footnotesize\ttfamily void exec\+User\+Menu\+Choice (\begin{DoxyParamCaption}\item[{int}]{choice,  }\item[{user $\ast$}]{loginptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{app_8c_a1293988b231379fcd1c61880b91a3117}\label{app_8c_a1293988b231379fcd1c61880b91a3117}} 
+\index{app.c@{app.c}!userMenu@{userMenu}}
+\index{userMenu@{userMenu}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{userMenu()}{userMenu()}}
+{\footnotesize\ttfamily int user\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 5

@@ -1,0 +1,81 @@
+.TH "user.c" 3 "Tue Jun 23 2020" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+user.c \- This is the file where all the user related auth, sign, sign up will be handled here\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./include/user\&.h'\fP
+.br
+\fC#include '\&.\&./include/ui_design\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBisuser\fP (const char *username, const char *password, user *loginuser)"
+.br
+.ti -1c
+.RI "int \fBsignIn\fP (user *loginuser)"
+.br
+.ti -1c
+.RI "int \fBavailableuser\fP (const char *username)"
+.br
+.ti -1c
+.RI "void \fBcreateuser\fP (user *newuser)"
+.br
+.ti -1c
+.RI "void \fBregisteruser\fP (user *newuser)"
+.br
+.ti -1c
+.RI "int \fBsignUp\fP (user *newuser)"
+.br
+.ti -1c
+.RI "int \fBcheck_password\fP (char *check_pass)"
+.br
+.ti -1c
+.RI "int \fBeditPassword\fP (user *loginuserptr)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the file where all the user related auth, sign, sign up will be handled here\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Akhil Dama - akhildama@cmail.carleton.ca 
+.PP
+Meher Vishnu Kyatham - mehervishnukyatham@cmail.carleton.ca 
+.PP
+Naveen Billapati- naveenbillapati@cmail.carleton.ca 
+.PP
+Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int availableuser (const char * username)"
+
+.SS "int check_password (char * check_pass)"
+
+.SS "void createuser (user * newuser)"
+
+.SS "int editPassword (user * loginuserptr)"
+
+.SS "int isuser (const char * username, const char * password, user * loginuser)"
+
+.SS "void registeruser (user * newuser)"
+
+.SS "int signIn (user * loginuser)"
+
+.SS "int signUp (user * newuser)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

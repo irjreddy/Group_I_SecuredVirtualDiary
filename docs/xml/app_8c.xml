@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="app_8c" kind="file" language="C++">
+    <compoundname>app.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="yes">../include/app.h</includes>
+    <includes local="yes">C:/Users/Naveen Billapati/Desktop/Dev in C/Group_I_SecuredVirtualDiary/include/record.h</includes>
+    <includes local="yes">C:/Users/Naveen Billapati/Desktop/Dev in C/Group_I_SecuredVirtualDiary/include/user.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="yes">../include/ui_design.h</includes>
+    <includes local="yes">../include/calendar.h</includes>
+    <includes local="no">conio.h</includes>
+    <includes local="no">windows.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>windows.h</label>
+      </node>
+      <node id="9">
+        <label>../include/ui_design.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>../include/calendar.h</label>
+      </node>
+      <node id="11">
+        <label>conio.h</label>
+      </node>
+      <node id="3">
+        <label>../include/app.h</label>
+      </node>
+      <node id="4">
+        <label>C:/Users/Naveen Billapati/Desktop/Dev in C/Group_I_SecuredVirtualDiary/include/record.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>app.c</label>
+        <link refid="app_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/Naveen Billapati/Desktop/Dev in C/Group_I_SecuredVirtualDiary/include/user.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="app_8c_1a611cc9b5f655508482f3d7a9751c182a" prot="public" static="no">
+        <name>CLEAR</name>
+        <initializer>system(&quot;clear&quot;);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="app.c" line="21" column="11" bodyfile="app.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="app_8c_1af3f7cf10e8e78e94822f6392e6e0de9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>user *</type>
+        <definition>user* authUser</definition>
+        <argsstring>(user *loginuser)</argsstring>
+        <name>authUser</name>
+        <param>
+          <type>user *</type>
+          <declname>loginuser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="app.c" line="25" column="6" bodyfile="app.c" bodystart="25" bodyend="58"/>
+        <references refid="ui__design_8c_1a39abd40f68d03c40857be1e74407efb9" compoundref="ui__design_8c" startline="144" endline="146">red</references>
+        <references refid="ui__design_8c_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="ui__design_8c" startline="152" endline="154">reset</references>
+        <references refid="user_8c_1a2b1b152cc5b8b7239cd0b86c875ab0b9" compoundref="user_8c" startline="17" endline="48">signIn</references>
+        <references refid="user_8c_1a542b6d913940fc0d919fb2b0379ee8b4" compoundref="user_8c" startline="189" endline="196">signUp</references>
+        <referencedby refid="main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8c" startline="28" endline="80">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="app_8c_1a1293988b231379fcd1c61880b91a3117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int userMenu</definition>
+        <argsstring>()</argsstring>
+        <name>userMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="app.c" line="60" column="5" bodyfile="app.c" bodystart="60" bodyend="88"/>
+        <referencedby refid="main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8c" startline="28" endline="80">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="app_8c_1a9c4c0a6771563699b5ffce9f5104f553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void execUserMenuChoice</definition>
+        <argsstring>(int choice, user *loginptr)</argsstring>
+        <name>execUserMenuChoice</name>
+        <param>
+          <type>int</type>
+          <declname>choice</declname>
+        </param>
+        <param>
+          <type>user *</type>
+          <declname>loginptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="app.c" line="91" column="6" bodyfile="app.c" bodystart="91" bodyend="132"/>
+        <references refid="record_8c_1a4f1de0e4d909a1d6485f1cec0ddb71c9" compoundref="record_8c" startline="34" endline="98">addRecord</references>
+        <references refid="app_8c_1a611cc9b5f655508482f3d7a9751c182a" compoundref="app_8c" startline="21">CLEAR</references>
+        <references refid="record_8c_1a84fc88948c248e4a6197604ff1372da7" compoundref="record_8c" startline="100" endline="137">deleteRecord</references>
+        <references refid="user_8c_1a68016f511762595cef64dfdd5121e346" compoundref="user_8c" startline="260" endline="426">editPassword</references>
+        <references refid="record_8c_1abbc243381fb0d71948047d5e2db40093" compoundref="record_8c" startline="194" endline="284">editRecord</references>
+        <references refid="calendar_8c_1ac35e9521bf02a1f630814799b4798044" compoundref="calendar_8c" startline="56" endline="141">runCalendar</references>
+        <references refid="record_8c_1a1280bb77e84a37e7510c44c42628cc15" compoundref="record_8c" startline="140" endline="192">viewRecord</references>
+        <referencedby refid="main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8c" startline="28" endline="80">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the application file which is used to link everything in the project. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Akhil Dama - <ulink url="mailto:akhildama@cmail.carleton.ca">akhildama@cmail.carleton.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Meher Vishnu Kyatham - <ulink url="mailto:mehervishnukyatham@cmail.carleton.ca">mehervishnukyatham@cmail.carleton.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Naveen Billapati- <ulink url="mailto:naveenbillapati@cmail.carleton.ca">naveenbillapati@cmail.carleton.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Rajeshwar Reddy Keesara- <ulink url="mailto:rajeshwarreddykeesar@cmail.carleton.ca">rajeshwarreddykeesar@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/app.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/ui_design.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/calendar.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32<sp/><sp/><sp/>//If<sp/>in<sp/>windows</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>CLEAR<sp/>system(&quot;cls&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>CLEAR<sp/>system(&quot;clear&quot;);<sp/><sp/>//If<sp/>linux/Mac</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="app_8c_1a611cc9b5f655508482f3d7a9751c182a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="app_8c_1af3f7cf10e8e78e94822f6392e6e0de9c" refkind="member"><highlight class="normal">user*<sp/><ref refid="app_8c_1af3f7cf10e8e78e94822f6392e6e0de9c" kindref="member">authUser</ref>(user<sp/>*loginuser){<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>choice=0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ui__design_8c_1a39abd40f68d03c40857be1e74407efb9" kindref="member">red</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Please<sp/>Select<sp/>an<sp/>option<sp/>from<sp/>the<sp/>Main<sp/>Menu\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;1.<sp/>Sign<sp/>in\n2.<sp/>Sign<sp/>up\n\nChoice<sp/>:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ui__design_8c_1ad20897c5c8bd47f5d4005989bead0e55" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>&amp;choice)<sp/>!=<sp/>1<sp/>||<sp/>choice<sp/>&lt;<sp/>1<sp/>||<sp/>choice<sp/>&gt;<sp/>2){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getchar();<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ui__design_8c_1a39abd40f68d03c40857be1e74407efb9" kindref="member">red</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Wrong<sp/>Choice<sp/>\nPlease<sp/>choose<sp/>option<sp/>between<sp/>1<sp/>and<sp/>2<sp/>\nChoice<sp/>:<sp/>&quot;</highlight><highlight class="normal">);<ref refid="ui__design_8c_1ad20897c5c8bd47f5d4005989bead0e55" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>getchar();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(choice<sp/>==<sp/>1){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>login<sp/>=<sp/><ref refid="user_8c_1a2b1b152cc5b8b7239cd0b86c875ab0b9" kindref="member">signIn</ref>(loginuser);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(login){<sp/></highlight><highlight class="comment">//--&gt;<sp/>if(login<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ui__design_8c_1a39abd40f68d03c40857be1e74407efb9" kindref="member">red</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>===<sp/>Welcome<sp/>%s<sp/>!<sp/>===\n\n&quot;</highlight><highlight class="normal">,<sp/>loginuser-&gt;username);<ref refid="ui__design_8c_1ad20897c5c8bd47f5d4005989bead0e55" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>login<sp/>\n<sp/>Would<sp/>you<sp/>like<sp/>to<sp/>create<sp/>an<sp/>Account?\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="user_8c_1a542b6d913940fc0d919fb2b0379ee8b4" kindref="member">signUp</ref>(loginuser);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>loginuser;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="app_8c_1a1293988b231379fcd1c61880b91a3117" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="app_8c_1a1293988b231379fcd1c61880b91a3117" kindref="member">userMenu</ref>(){<sp/></highlight><highlight class="comment">//<sp/>displays<sp/>User<sp/>Menu,<sp/>then<sp/>returns<sp/>the<sp/>selected<sp/>option</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>option;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">printf(</highlight><highlight class="stringliteral">&quot;Please<sp/>Select<sp/>an<sp/>option<sp/>from<sp/>the<sp/>User<sp/>menu\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\t[1]<sp/>Add<sp/>Todays<sp/>Record<sp/>\n&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>SHOULD<sp/>LINK<sp/>RECORD.C<sp/>ADDRECORD()<sp/>FUNCTION<sp/>LATER<sp/>ON</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\t[2]<sp/>View<sp/>Previous<sp/>Records\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\t[3]<sp/>Edit<sp/>Records\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\t[4]<sp/>Delete<sp/>Records\n&quot;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>should<sp/>link<sp/>delete<sp/>function<sp/>when<sp/>switch<sp/>case<sp/>is<sp/>ready</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\t[5]<sp/>Monthly<sp/>CalenderView<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\t[6]<sp/>Edit<sp/>Password<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\t[7]<sp/>Signout<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\t[8]<sp/>Exit<sp/>From<sp/>Application\n&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>this<sp/>option<sp/>will<sp/>be<sp/>available<sp/>in<sp/>release<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Please<sp/>Enter<sp/>your<sp/>Choice<sp/>:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>user<sp/>enter<sp/>something<sp/>that<sp/>is<sp/>not<sp/>the<sp/>option,<sp/>we<sp/>show<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(scanf(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>&amp;option)<sp/>!=1<sp/>||<sp/>option&lt;1<sp/>||<sp/>option<sp/>&gt;7)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getchar();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Sorry,<sp/>Please<sp/>select<sp/>a<sp/>valid<sp/>choice<sp/>from<sp/>the<sp/>above!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fflush(stdin);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>option;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="app_8c_1a9c4c0a6771563699b5ffce9f5104f553" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="app_8c_1a9c4c0a6771563699b5ffce9f5104f553" kindref="member">execUserMenuChoice</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>choice,<sp/>user<sp/>*loginptr){</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(choice)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="record_8c_1a4f1de0e4d909a1d6485f1cec0ddb71c9" kindref="member">addRecord</ref>(loginptr);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="record_8c_1a1280bb77e84a37e7510c44c42628cc15" kindref="member">viewRecord</ref>(loginptr);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="record_8c_1abbc243381fb0d71948047d5e2db40093" kindref="member">editRecord</ref>(loginptr);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="record_8c_1a84fc88948c248e4a6197604ff1372da7" kindref="member">deleteRecord</ref>(loginptr);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>5:</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ac35e9521bf02a1f630814799b4798044" kindref="member">runCalendar</ref>(loginptr);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="app_8c_1a611cc9b5f655508482f3d7a9751c182a" kindref="member">CLEAR</ref></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>6:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="user_8c_1a68016f511762595cef64dfdd5121e346" kindref="member">editPassword</ref>(loginptr);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>7:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loginptr-&gt;isLoggedIn<sp/>=0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//signout(loginptr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>8:</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(0);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="app.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,515 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="calendar_8c" kind="file" language="C++">
+    <compoundname>calendar.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">conio.h</includes>
+    <includes local="no">windows.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="yes">../include/user.h</includes>
+    <includes local="no">unistd.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>../include/user.h</label>
+      </node>
+      <node id="4">
+        <label>windows.h</label>
+      </node>
+      <node id="1">
+        <label>calendar.c</label>
+        <link refid="calendar_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>conio.h</label>
+      </node>
+      <node id="7">
+        <label>unistd.h</label>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="calendar_8c_1abccbc24c7569657b2c2af7fcd59d2cc9" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* month[]</definition>
+        <argsstring>[]</argsstring>
+        <name>month</name>
+        <initializer>={&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;,&quot;July&quot;,&quot;August&quot;,&quot;September&quot;,&quot;October&quot;,&quot;November&quot;,&quot;December&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="calendar.c" line="51" column="6" bodyfile="calendar.c" bodystart="51" bodyend="-1"/>
+        <referencedby refid="calendar_8c_1aea42ea688c2c761eed03c695be331b4f" compoundref="calendar_8c" startline="144" endline="235">displayCalendar</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="calendar_8c_1ad43be19046286936ce4b4548a0f2317e" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* week[]</definition>
+        <argsstring>[]</argsstring>
+        <name>week</name>
+        <initializer>={&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;,&quot;Sat&quot;,&quot;Sun&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="calendar.c" line="52" column="6" bodyfile="calendar.c" bodystart="52" bodyend="-1"/>
+        <referencedby refid="calendar_8c_1aea42ea688c2c761eed03c695be331b4f" compoundref="calendar_8c" startline="144" endline="235">displayCalendar</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="calendar_8c_1a0e4771af240bfd1fcabc9974fe021791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getkey</definition>
+        <argsstring>()</argsstring>
+        <name>getkey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="calendar.c" line="238" column="5" bodyfile="calendar.c" bodystart="238" bodyend="250" declfile="calendar.c" declline="19" declcolumn="5"/>
+        <referencedby refid="calendar_8c_1ac35e9521bf02a1f630814799b4798044" compoundref="calendar_8c" startline="56" endline="141">runCalendar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="calendar_8c_1aea42ea688c2c761eed03c695be331b4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void displayCalendar</definition>
+        <argsstring>(int, int, int, int[], user *loginptr)</argsstring>
+        <name>displayCalendar</name>
+        <param>
+          <type>int</type>
+          <defname>nyr</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>nmonth</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>tdays</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>days</defname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>user *</type>
+          <declname>loginptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="calendar.c" line="144" column="6" bodyfile="calendar.c" bodystart="144" bodyend="235" declfile="calendar.c" declline="20" declcolumn="6"/>
+        <references refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" compoundref="calendar_8c" startline="24" endline="30">gotoxy</references>
+        <references refid="calendar_8c_1abccbc24c7569657b2c2af7fcd59d2cc9" compoundref="calendar_8c" startline="51">month</references>
+        <references refid="calendar_8c_1aa7d42b816af66303171116657d399323" compoundref="calendar_8c" startline="33" endline="48">SetColor</references>
+        <references refid="calendar_8c_1ad43be19046286936ce4b4548a0f2317e" compoundref="calendar_8c" startline="52">week</references>
+        <referencedby refid="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" compoundref="calendar_8c" startline="253" endline="283">calendar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void calendar</definition>
+        <argsstring>(int, int, user *loginptr)</argsstring>
+        <name>calendar</name>
+        <param>
+          <type>int</type>
+          <defname>nyr</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>nmonth</defname>
+        </param>
+        <param>
+          <type>user *</type>
+          <declname>loginptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="calendar.c" line="253" column="6" bodyfile="calendar.c" bodystart="253" bodyend="283" declfile="calendar.c" declline="21" declcolumn="6"/>
+        <references refid="calendar_8c_1aea42ea688c2c761eed03c695be331b4f" compoundref="calendar_8c" startline="144" endline="235">displayCalendar</references>
+        <referencedby refid="calendar_8c_1ac35e9521bf02a1f630814799b4798044" compoundref="calendar_8c" startline="56" endline="141">runCalendar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gotoxy</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>gotoxy</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="calendar.c" line="24" column="6" bodyfile="calendar.c" bodystart="24" bodyend="30"/>
+        <referencedby refid="calendar_8c_1aea42ea688c2c761eed03c695be331b4f" compoundref="calendar_8c" startline="144" endline="235">displayCalendar</referencedby>
+        <referencedby refid="calendar_8c_1ac35e9521bf02a1f630814799b4798044" compoundref="calendar_8c" startline="56" endline="141">runCalendar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="calendar_8c_1aa7d42b816af66303171116657d399323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetColor</definition>
+        <argsstring>(int ForgC)</argsstring>
+        <name>SetColor</name>
+        <param>
+          <type>int</type>
+          <declname>ForgC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="calendar.c" line="33" column="6" bodyfile="calendar.c" bodystart="33" bodyend="48"/>
+        <referencedby refid="calendar_8c_1aea42ea688c2c761eed03c695be331b4f" compoundref="calendar_8c" startline="144" endline="235">displayCalendar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="calendar_8c_1ac35e9521bf02a1f630814799b4798044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int runCalendar</definition>
+        <argsstring>(user *loginptr)</argsstring>
+        <name>runCalendar</name>
+        <param>
+          <type>user *</type>
+          <declname>loginptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="calendar.c" line="56" column="5" bodyfile="calendar.c" bodystart="56" bodyend="141"/>
+        <references refid="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" compoundref="calendar_8c" startline="253" endline="283">calendar</references>
+        <references refid="calendar_8c_1a0e4771af240bfd1fcabc9974fe021791" compoundref="calendar_8c" startline="238" endline="250">getkey</references>
+        <references refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" compoundref="calendar_8c" startline="24" endline="30">gotoxy</references>
+        <referencedby refid="app_8c_1a9c4c0a6771563699b5ffce9f5104f553" compoundref="app_8c" startline="91" endline="132">execUserMenuChoice</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains all the calendar functionality of the project. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Akhil Dama - <ulink url="mailto:akhildama@cmail.carleton.ca">akhildama@cmail.carleton.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Meher Vishnu Kyatham - <ulink url="mailto:mehervishnukyatham@cmail.carleton.ca">mehervishnukyatham@cmail.carleton.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Naveen Billapati- <ulink url="mailto:naveenbillapati@cmail.carleton.ca">naveenbillapati@cmail.carleton.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Rajeshwar Reddy Keesara- <ulink url="mailto:rajeshwarreddykeesar@cmail.carleton.ca">rajeshwarreddykeesar@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;conio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/user.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="calendar_8c_1a0e4771af240bfd1fcabc9974fe021791" kindref="member">getkey</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="calendar_8c_1aea42ea688c2c761eed03c695be331b4f" kindref="member">displayCalendar</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[],user<sp/>*loginptr);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" kindref="member">calendar</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,user<sp/>*loginptr);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//--------------<sp/>GOTO<sp/>function<sp/>definition<sp/>----------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>COORD<sp/>coord;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>coord.X=x;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>coord.Y=y;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coord);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//------------<sp/>Change<sp/>color<sp/>-------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="calendar_8c_1aa7d42b816af66303171116657d399323" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="calendar_8c_1aa7d42b816af66303171116657d399323" kindref="member">SetColor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ForgC)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>WORD<sp/>wColor;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//We<sp/>will<sp/>need<sp/>this<sp/>handle<sp/>to<sp/>get<sp/>the<sp/>current<sp/>background<sp/>attribute</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>HANDLE<sp/>hStdOut<sp/>=<sp/>GetStdHandle(STD_OUTPUT_HANDLE);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>CONSOLE_SCREEN_BUFFER_INFO<sp/>csbi;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//We<sp/>use<sp/>csbi<sp/>for<sp/>the<sp/>wAttributes<sp/>word.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(GetConsoleScreenBufferInfo(hStdOut,<sp/>&amp;csbi))</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Mask<sp/>out<sp/>all<sp/>but<sp/>the<sp/>background<sp/>attribute,<sp/>and<sp/>add<sp/>in<sp/>the<sp/>forgournd<sp/>color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wColor<sp/>=<sp/>(csbi.wAttributes<sp/>&amp;<sp/>0xF0)<sp/>+<sp/>(ForgC<sp/>&amp;<sp/>0x0F);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetConsoleTextAttribute(hStdOut,<sp/>wColor);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="calendar_8c_1abccbc24c7569657b2c2af7fcd59d2cc9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="calendar_8c_1abccbc24c7569657b2c2af7fcd59d2cc9" kindref="member">month</ref>[]={</highlight><highlight class="stringliteral">&quot;January&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;February&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;March&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;April&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;May&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;June&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;July&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;August&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;September&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;October&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;November&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;December&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52" refid="calendar_8c_1ad43be19046286936ce4b4548a0f2317e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="calendar_8c_1ad43be19046286936ce4b4548a0f2317e" kindref="member">week</ref>[]={</highlight><highlight class="stringliteral">&quot;Mon&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Tue&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Wed&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Thu&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Fri&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Sat&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Sun&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="calendar_8c_1ac35e9521bf02a1f630814799b4798044" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="calendar_8c_1ac35e9521bf02a1f630814799b4798044" kindref="member">runCalendar</ref>(user<sp/>*loginptr)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nmonth,nyr,ch;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>mtime;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>time(&amp;mtime);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>*lt<sp/>=<sp/>localtime(&amp;mtime);<sp/></highlight><highlight class="comment">//returns<sp/><sp/>localtime</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>nmonth<sp/>=<sp/>(int)lt-&gt;tm_mon+1;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>nyr<sp/>=<sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)lt-&gt;tm_year+1900;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1){</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" kindref="member">calendar</ref>(nyr,nmonth,loginptr);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(20,20);printf(</highlight><highlight class="stringliteral">&quot;(*)<sp/>Use<sp/>LEFT,<sp/>RIGHT,<sp/>UP<sp/>and<sp/>DOWN<sp/>arrow.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(20,24);printf(</highlight><highlight class="stringliteral">&quot;(*)<sp/>Press<sp/>ESC<sp/>to<sp/>Exit.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch=<ref refid="calendar_8c_1a0e4771af240bfd1fcabc9974fe021791" kindref="member">getkey</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(ch)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>80:<sp/></highlight><highlight class="comment">//--------<sp/>DOWN<sp/>ARROW<sp/>-----------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Increasing<sp/>month</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(nmonth==12)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Jump<sp/>to<sp/>next<sp/>year<sp/>if<sp/>month<sp/>is<sp/>december</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nmonth=1;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nyr++;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nmonth++;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" kindref="member">calendar</ref>(nyr,nmonth,loginptr);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>77:<sp/></highlight><highlight class="comment">//--------<sp/>RIGHT<sp/>ARROW<sp/>----------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Increasing<sp/>Year</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nyr++;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" kindref="member">calendar</ref>(nyr,nmonth,loginptr);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>72:<sp/></highlight><highlight class="comment">//-------<sp/>UP<sp/>ARROW<sp/>-------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decreasing<sp/>Month</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(nmonth==1)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Jump<sp/>to<sp/>previous<sp/>year<sp/>if<sp/>month<sp/>is<sp/>january</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nyr--;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nmonth=12;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nmonth--;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" kindref="member">calendar</ref>(nyr,nmonth,loginptr);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>75:<sp/></highlight><highlight class="comment">//--------<sp/>LEFT<sp/>ARROW<sp/>----------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Decreasing<sp/>year</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(nyr==1945)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>year<sp/>is<sp/>1945<sp/>and<sp/>we<sp/>click<sp/>left<sp/>arrow<sp/>than</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(15,2);printf(</highlight><highlight class="stringliteral">&quot;Year<sp/>below<sp/>1945<sp/>not<sp/>available&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nyr--;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" kindref="member">calendar</ref>(nyr,nmonth,loginptr);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>27:<sp/></highlight><highlight class="comment">//---------<sp/>ESC<sp/>KEY<sp/>------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;cls&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(50,14);printf(</highlight><highlight class="stringliteral">&quot;Returning<sp/>to<sp/>Main<sp/>Menu.\n\n\n\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>exit;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>exit:</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>getch();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/>sleep(1);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">//==============<sp/>DISPLAYING<sp/>THE<sp/><sp/>CALENDAR<sp/>===================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="calendar_8c_1aea42ea688c2c761eed03c695be331b4f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="calendar_8c_1aea42ea688c2c761eed03c695be331b4f" kindref="member">displayCalendar</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nyr,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nmonth,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tdays,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>days[],<sp/>user<sp/>*loginptr)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,j,pos;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1aa7d42b816af66303171116657d399323" kindref="member">SetColor</ref>(12);<sp/></highlight><highlight class="comment">//Color<sp/>red</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(56,6);printf(</highlight><highlight class="stringliteral">&quot;%s<sp/>%d&quot;</highlight><highlight class="normal">,<ref refid="calendar_8c_1abccbc24c7569657b2c2af7fcd59d2cc9" kindref="member">month</ref>[nmonth-1],nyr);<sp/></highlight><highlight class="comment">//Heading<sp/>year<sp/>and<sp/>month<sp/>dispalying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0,pos=30;i&lt;7;i++,pos+=10)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i==6)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1aa7d42b816af66303171116657d399323" kindref="member">SetColor</ref>(9);<sp/></highlight><highlight class="comment">//Sunday<sp/>color<sp/>blue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1aa7d42b816af66303171116657d399323" kindref="member">SetColor</ref>(10);<sp/><sp/></highlight><highlight class="comment">//Others<sp/>day<sp/>color<sp/>green</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(pos,8);printf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<ref refid="calendar_8c_1ad43be19046286936ce4b4548a0f2317e" kindref="member">week</ref>[i]);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1aa7d42b816af66303171116657d399323" kindref="member">SetColor</ref>(15);<sp/></highlight><highlight class="comment">//setting<sp/>the<sp/>color<sp/>white</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/>tdays++;<sp/></highlight><highlight class="comment">//incrementing<sp/>the<sp/>tdays<sp/>by<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(tdays==0<sp/>||<sp/>tdays==7)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos=91;<sp/></highlight><highlight class="comment">//if<sp/>tdays<sp/>is<sp/>0<sp/>or<sp/>7,<sp/>position<sp/>is<sp/>sunday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(tdays==1)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos=31;<sp/></highlight><highlight class="comment">//if<sp/>tdays<sp/>is<sp/>1,<sp/>position<sp/>is<sp/>monday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(tdays==2)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos=41;<sp/><sp/></highlight><highlight class="comment">//if<sp/>tdays<sp/>is<sp/>2,<sp/>position<sp/>is<sp/>tuesday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(tdays==3)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos=51;<sp/><sp/></highlight><highlight class="comment">//if<sp/>tdays<sp/>is<sp/>3,<sp/>position<sp/>is<sp/>wednesday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(tdays==4)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos=61;<sp/><sp/></highlight><highlight class="comment">//if<sp/>tdays<sp/>is<sp/>4,<sp/>position<sp/>is<sp/>thursday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(tdays==5)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos=71;<sp/><sp/></highlight><highlight class="comment">//if<sp/>tdays<sp/>is<sp/>5,<sp/>position<sp/>is<sp/>friday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(tdays==6)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos=81;<sp/><sp/></highlight><highlight class="comment">//if<sp/>tdays<sp/>is<sp/>6,<sp/>position<sp/>is<sp/>saturday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0,j=10,pos;i&lt;days[nmonth-1];i++,pos+=10)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pos==91)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1aa7d42b816af66303171116657d399323" kindref="member">SetColor</ref>(8);<sp/></highlight><highlight class="comment">//Changing<sp/>color<sp/>to<sp/>dark<sp/>grey<sp/>for<sp/>sunday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1aa7d42b816af66303171116657d399323" kindref="member">SetColor</ref>(7);<sp/></highlight><highlight class="comment">//Changing<sp/>color<sp/>to<sp/>white<sp/>for<sp/>all<sp/>days</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>date_str[100];</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>foldername[100]=</highlight><highlight class="stringliteral">&quot;./records/&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[50]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;./&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(name,loginptr-&gt;username);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(name,</highlight><highlight class="stringliteral">&quot;/records/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(date_str,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(date_str),<sp/></highlight><highlight class="stringliteral">&quot;%d-%d-%d.txt&quot;</highlight><highlight class="normal">,<sp/>i+1,nmonth,nyr);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(name,date_str);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/>*fp<sp/>=<sp/>fopen(name,</highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fp<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(pos,j);printf(</highlight><highlight class="stringliteral">&quot;Missing&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(pos,j);printf(</highlight><highlight class="stringliteral">&quot;%d-%d-%d&quot;</highlight><highlight class="normal">,i+1,nmonth,nyr);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gotoxy(pos,j);printf(&quot;%d-%d-%d&quot;,i+1,nmonth-1,nyr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pos==91)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos=21;<sp/></highlight><highlight class="comment">//Moving<sp/>position<sp/>to<sp/>monday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j++;<sp/><sp/></highlight><highlight class="comment">//Increasing<sp/>j<sp/>by<sp/>10<sp/>if<sp/>position<sp/>is<sp/>sunday</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(fp);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1aa7d42b816af66303171116657d399323" kindref="member">SetColor</ref>(5);<sp/></highlight><highlight class="comment">//Changing<sp/>color<sp/>to<sp/>purple</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Drawing<sp/>horizontal<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=22;i&lt;102;i++)</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(i,4);printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,196);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(i,17);printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,196);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Drawing<sp/>all<sp/>the<sp/>corner<sp/>of<sp/>the<sp/>rectangle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(21,4);printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,218);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(102,4);printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,191);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(21,17);printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,192);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(102,17);printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,217);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Drawing<sp/>vertical<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=5;i&lt;17;i++)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(21,i);printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,179);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(102,i);printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,179);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1aa7d42b816af66303171116657d399323" kindref="member">SetColor</ref>(11);<sp/></highlight><highlight class="comment">//Changing<sp/>color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Navigation<sp/>Symbol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(24,11);printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,174);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1ae824443b3f661414ba1f2718e17fe97d" kindref="member">gotoxy</ref>(98,11);printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,175);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">//==============<sp/><sp/>ARROW<sp/>KEY<sp/>===============</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="calendar_8c_1a0e4771af240bfd1fcabc9974fe021791" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="calendar_8c_1a0e4771af240bfd1fcabc9974fe021791" kindref="member">getkey</ref>()</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>ch=getch();</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ch==0)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;zero&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch=getch();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ch;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ch;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="calendar_8c_1a8cec2a07c8db8e1b8704b01db1699eb5" kindref="member">calendar</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nyr,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nmonth,<sp/>user<sp/>*loginptr)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>days[12]={31,28,31,30,31,30,31,31,30,31,30,31};</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tdays=0,k,myear;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>system(</highlight><highlight class="stringliteral">&quot;cls&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>myear=nyr-1;<sp/></highlight><highlight class="comment">//Decrease<sp/>year<sp/>by<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(myear&gt;=1945)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(k=1945;k&lt;=myear;k++)</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(k%4==0)<sp/></highlight><highlight class="comment">//If<sp/>the<sp/>year<sp/>is<sp/>a<sp/>leap<sp/>year<sp/>than<sp/><sp/>no<sp/>of<sp/>days<sp/>is<sp/>366</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tdays=tdays+366;<sp/><sp/></highlight><highlight class="comment">//counting<sp/>all<sp/>the<sp/>days<sp/>till<sp/>nyr<sp/>-<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//If<sp/>the<sp/>year<sp/>is<sp/>a<sp/>leap<sp/>year<sp/>than<sp/>total<sp/>no<sp/>of<sp/>days<sp/>is<sp/>365</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tdays=tdays+365;<sp/><sp/></highlight><highlight class="comment">//counting<sp/>all<sp/>the<sp/>days<sp/>till<sp/>nyr<sp/>-<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(nyr%4==0)</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>days[1]=29;<sp/></highlight><highlight class="comment">//changing<sp/>value<sp/>in<sp/>days<sp/>array<sp/>from<sp/>28<sp/>to<sp/>29<sp/>since<sp/>leap<sp/>year</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>days[1]=28;<sp/></highlight><highlight class="comment">//changing<sp/>value<sp/>in<sp/>days<sp/>array<sp/>from<sp/>29<sp/>to<sp/>28<sp/>since<sp/>not<sp/>a<sp/>leap<sp/>year</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(k=0;k&lt;(nmonth-1);k++)</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tdays=tdays+days[k];<sp/></highlight><highlight class="comment">//Adding<sp/>nmonth-1<sp/>days<sp/>to<sp/>tdays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tdays=tdays%7;<sp/></highlight><highlight class="comment">//Finding<sp/>the<sp/>remainder<sp/>of<sp/>tdays<sp/>so<sp/>it<sp/>can<sp/>calculate<sp/>the<sp/>position<sp/>to<sp/>display</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="calendar_8c_1aea42ea688c2c761eed03c695be331b4f" kindref="member">displayCalendar</ref>(nyr,nmonth,tdays,days,loginptr);<sp/></highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="calendar.c"/>
+  </compounddef>
+</doxygen>

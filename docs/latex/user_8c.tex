@@ -1,0 +1,119 @@
+\hypertarget{user_8c}{}\doxysection{user.\+c File Reference}
+\label{user_8c}\index{user.c@{user.c}}
+
+
+This is the file where all the user related auth, sign, sign up will be handled here.  
+
+
+{\ttfamily \#include \char`\"{}../include/user.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/ui\+\_\+design.\+h\char`\"{}}\newline
+Include dependency graph for user.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{user_8c_ab6dba61969f06b6cca576a1db6c5587c}{isuser}} (const char $\ast$username, const char $\ast$password, user $\ast$loginuser)
+\item 
+int \mbox{\hyperlink{user_8c_a2b1b152cc5b8b7239cd0b86c875ab0b9}{sign\+In}} (user $\ast$loginuser)
+\item 
+int \mbox{\hyperlink{user_8c_ad97deb2e262978a4044a710f8923476d}{availableuser}} (const char $\ast$username)
+\item 
+void \mbox{\hyperlink{user_8c_ac1b388579e5943fab7d981aeff9c5495}{createuser}} (user $\ast$newuser)
+\item 
+void \mbox{\hyperlink{user_8c_af57ab9ce7559738624613433a72a111b}{registeruser}} (user $\ast$newuser)
+\item 
+int \mbox{\hyperlink{user_8c_a542b6d913940fc0d919fb2b0379ee8b4}{sign\+Up}} (user $\ast$newuser)
+\item 
+int \mbox{\hyperlink{user_8c_ae519a7af71b3490f896d03ac2abda710}{check\+\_\+password}} (char $\ast$check\+\_\+pass)
+\item 
+int \mbox{\hyperlink{user_8c_a68016f511762595cef64dfdd5121e346}{edit\+Password}} (user $\ast$loginuserptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the file where all the user related auth, sign, sign up will be handled here. 
+
+\begin{DoxyAuthor}{Author}
+Akhil Dama -\/ \href{mailto:akhildama@cmail.carleton.ca}{\texttt{ akhildama@cmail.\+carleton.\+ca}} 
+
+Meher Vishnu Kyatham -\/ \href{mailto:mehervishnukyatham@cmail.carleton.ca}{\texttt{ mehervishnukyatham@cmail.\+carleton.\+ca}} 
+
+Naveen Billapati-\/ \href{mailto:naveenbillapati@cmail.carleton.ca}{\texttt{ naveenbillapati@cmail.\+carleton.\+ca}} 
+
+Rajeshwar Reddy Keesara-\/ \href{mailto:rajeshwarreddykeesar@cmail.carleton.ca}{\texttt{ rajeshwarreddykeesar@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{user_8c_ad97deb2e262978a4044a710f8923476d}\label{user_8c_ad97deb2e262978a4044a710f8923476d}} 
+\index{user.c@{user.c}!availableuser@{availableuser}}
+\index{availableuser@{availableuser}!user.c@{user.c}}
+\doxysubsubsection{\texorpdfstring{availableuser()}{availableuser()}}
+{\footnotesize\ttfamily int availableuser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{username }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{user_8c_ae519a7af71b3490f896d03ac2abda710}\label{user_8c_ae519a7af71b3490f896d03ac2abda710}} 
+\index{user.c@{user.c}!check\_password@{check\_password}}
+\index{check\_password@{check\_password}!user.c@{user.c}}
+\doxysubsubsection{\texorpdfstring{check\_password()}{check\_password()}}
+{\footnotesize\ttfamily int check\+\_\+password (\begin{DoxyParamCaption}\item[{char $\ast$}]{check\+\_\+pass }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{user_8c_ac1b388579e5943fab7d981aeff9c5495}\label{user_8c_ac1b388579e5943fab7d981aeff9c5495}} 
+\index{user.c@{user.c}!createuser@{createuser}}
+\index{createuser@{createuser}!user.c@{user.c}}
+\doxysubsubsection{\texorpdfstring{createuser()}{createuser()}}
+{\footnotesize\ttfamily void createuser (\begin{DoxyParamCaption}\item[{user $\ast$}]{newuser }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{user_8c_a68016f511762595cef64dfdd5121e346}\label{user_8c_a68016f511762595cef64dfdd5121e346}} 
+\index{user.c@{user.c}!editPassword@{editPassword}}
+\index{editPassword@{editPassword}!user.c@{user.c}}
+\doxysubsubsection{\texorpdfstring{editPassword()}{editPassword()}}
+{\footnotesize\ttfamily int edit\+Password (\begin{DoxyParamCaption}\item[{user $\ast$}]{loginuserptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{user_8c_ab6dba61969f06b6cca576a1db6c5587c}\label{user_8c_ab6dba61969f06b6cca576a1db6c5587c}} 
+\index{user.c@{user.c}!isuser@{isuser}}
+\index{isuser@{isuser}!user.c@{user.c}}
+\doxysubsubsection{\texorpdfstring{isuser()}{isuser()}}
+{\footnotesize\ttfamily int isuser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{username,  }\item[{const char $\ast$}]{password,  }\item[{user $\ast$}]{loginuser }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{user_8c_af57ab9ce7559738624613433a72a111b}\label{user_8c_af57ab9ce7559738624613433a72a111b}} 
+\index{user.c@{user.c}!registeruser@{registeruser}}
+\index{registeruser@{registeruser}!user.c@{user.c}}
+\doxysubsubsection{\texorpdfstring{registeruser()}{registeruser()}}
+{\footnotesize\ttfamily void registeruser (\begin{DoxyParamCaption}\item[{user $\ast$}]{newuser }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{user_8c_a2b1b152cc5b8b7239cd0b86c875ab0b9}\label{user_8c_a2b1b152cc5b8b7239cd0b86c875ab0b9}} 
+\index{user.c@{user.c}!signIn@{signIn}}
+\index{signIn@{signIn}!user.c@{user.c}}
+\doxysubsubsection{\texorpdfstring{signIn()}{signIn()}}
+{\footnotesize\ttfamily int sign\+In (\begin{DoxyParamCaption}\item[{user $\ast$}]{loginuser }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{user_8c_a542b6d913940fc0d919fb2b0379ee8b4}\label{user_8c_a542b6d913940fc0d919fb2b0379ee8b4}} 
+\index{user.c@{user.c}!signUp@{signUp}}
+\index{signUp@{signUp}!user.c@{user.c}}
+\doxysubsubsection{\texorpdfstring{signUp()}{signUp()}}
+{\footnotesize\ttfamily int sign\+Up (\begin{DoxyParamCaption}\item[{user $\ast$}]{newuser }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12

@@ -1,0 +1,214 @@
+\hypertarget{ui__design_8c}{}\doxysection{ui\+\_\+design.\+c File Reference}
+\label{ui__design_8c}\index{ui\_design.c@{ui\_design.c}}
+
+
+In this file we will be handling all the design functionalities of our system.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for ui\+\_\+design.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ui__design_8c_a611cc9b5f655508482f3d7a9751c182a}{C\+L\+E\+AR}}~system(\char`\"{}clear\char`\"{});
+\item 
+\#define \mbox{\hyperlink{ui__design_8c_a137aa83ec74421d226a90c92ec032ac9}{K\+N\+RM}}~\char`\"{}\textbackslash{}x1B\mbox{[}0m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ui__design_8c_a66290957baed5df3930ada4cb8caccf1}{K\+R\+ED}}~\char`\"{}\textbackslash{}x1B\mbox{[}31m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ui__design_8c_ac081c83b067273757f7a2e54a5957d41}{K\+G\+RN}}~\char`\"{}\textbackslash{}x1B\mbox{[}32m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ui__design_8c_a897b10d246533c95ba86cb79f92e465a}{K\+Y\+EL}}~\char`\"{}\textbackslash{}x1B\mbox{[}33m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ui__design_8c_a3f838f2fc3a9a3b434be606fc908964b}{K\+B\+LU}}~\char`\"{}\textbackslash{}x1B\mbox{[}34m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ui__design_8c_a32036c94dbb166a3f874b7efc169841f}{K\+C\+YN}}~\char`\"{}\textbackslash{}x1B\mbox{[}36m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ui__design_8c_af0036c8022c9980079ab17e5c87fd478}{K\+W\+HT}}~\char`\"{}\textbackslash{}x1B\mbox{[}37m\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ui__design_8c_a182245157ae676038afc342f4efdae01}{echo}} (char print\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{ui__design_8c_a28a40d583f8a392cefdb4b69fab1d178}{br}} (int line)
+\item 
+void \mbox{\hyperlink{ui__design_8c_a6db9b9c1573f5ffcbe3762d34161f880}{pre}} (int tab)
+\item 
+void \mbox{\hyperlink{ui__design_8c_ad89dde2c5c3b497489fa8c21d8dd780b}{span}} (int space)
+\item 
+void \mbox{\hyperlink{ui__design_8c_a81de7817e671329fc738e0efe1872547}{ccolor}} (int clr)
+\item 
+void \mbox{\hyperlink{ui__design_8c_aa83f3a0c876012b8c217c721f9c7dac3}{welcome\+\_\+screen}} ()
+\item 
+void \mbox{\hyperlink{ui__design_8c_ae7c1bbe56322f641e8f3b34e72c5b5f5}{loading}} ()
+\item 
+void \mbox{\hyperlink{ui__design_8c_a6fd4d504766f3b5865c60fca8146c315}{middle1}} (void)
+\item 
+void \mbox{\hyperlink{ui__design_8c_a5751a79e4a4a79bd9bdc4ed2ccc9d339}{middtab1}} (void)
+\item 
+void \mbox{\hyperlink{ui__design_8c_a39abd40f68d03c40857be1e74407efb9}{red}} ()
+\item 
+void \mbox{\hyperlink{ui__design_8c_ab0c10e6284be130a7973fa029a690ef7}{yellow}} ()
+\item 
+void \mbox{\hyperlink{ui__design_8c_ad20897c5c8bd47f5d4005989bead0e55}{reset}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+In this file we will be handling all the design functionalities of our system. 
+
+\begin{DoxyAuthor}{Author}
+Akhil Dama -\/ \href{mailto:akhildama@cmail.carleton.ca}{\texttt{ akhildama@cmail.\+carleton.\+ca}} 
+
+Meher Vishnu Kyatham -\/ \href{mailto:mehervishnukyatham@cmail.carleton.ca}{\texttt{ mehervishnukyatham@cmail.\+carleton.\+ca}} 
+
+Naveen Billapati-\/ \href{mailto:naveenbillapati@cmail.carleton.ca}{\texttt{ naveenbillapati@cmail.\+carleton.\+ca}} 
+
+Rajeshwar Reddy Keesara-\/ \href{mailto:rajeshwarreddykeesar@cmail.carleton.ca}{\texttt{ rajeshwarreddykeesar@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ui__design_8c_a611cc9b5f655508482f3d7a9751c182a}\label{ui__design_8c_a611cc9b5f655508482f3d7a9751c182a}} 
+\index{ui\_design.c@{ui\_design.c}!CLEAR@{CLEAR}}
+\index{CLEAR@{CLEAR}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{CLEAR}{CLEAR}}
+{\footnotesize\ttfamily \#define C\+L\+E\+AR~system(\char`\"{}clear\char`\"{});}
+
+\mbox{\Hypertarget{ui__design_8c_a3f838f2fc3a9a3b434be606fc908964b}\label{ui__design_8c_a3f838f2fc3a9a3b434be606fc908964b}} 
+\index{ui\_design.c@{ui\_design.c}!KBLU@{KBLU}}
+\index{KBLU@{KBLU}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{KBLU}{KBLU}}
+{\footnotesize\ttfamily \#define K\+B\+LU~\char`\"{}\textbackslash{}x1B\mbox{[}34m\char`\"{}}
+
+\mbox{\Hypertarget{ui__design_8c_a32036c94dbb166a3f874b7efc169841f}\label{ui__design_8c_a32036c94dbb166a3f874b7efc169841f}} 
+\index{ui\_design.c@{ui\_design.c}!KCYN@{KCYN}}
+\index{KCYN@{KCYN}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{KCYN}{KCYN}}
+{\footnotesize\ttfamily \#define K\+C\+YN~\char`\"{}\textbackslash{}x1B\mbox{[}36m\char`\"{}}
+
+\mbox{\Hypertarget{ui__design_8c_ac081c83b067273757f7a2e54a5957d41}\label{ui__design_8c_ac081c83b067273757f7a2e54a5957d41}} 
+\index{ui\_design.c@{ui\_design.c}!KGRN@{KGRN}}
+\index{KGRN@{KGRN}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{KGRN}{KGRN}}
+{\footnotesize\ttfamily \#define K\+G\+RN~\char`\"{}\textbackslash{}x1B\mbox{[}32m\char`\"{}}
+
+\mbox{\Hypertarget{ui__design_8c_a137aa83ec74421d226a90c92ec032ac9}\label{ui__design_8c_a137aa83ec74421d226a90c92ec032ac9}} 
+\index{ui\_design.c@{ui\_design.c}!KNRM@{KNRM}}
+\index{KNRM@{KNRM}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{KNRM}{KNRM}}
+{\footnotesize\ttfamily \#define K\+N\+RM~\char`\"{}\textbackslash{}x1B\mbox{[}0m\char`\"{}}
+
+\mbox{\Hypertarget{ui__design_8c_a66290957baed5df3930ada4cb8caccf1}\label{ui__design_8c_a66290957baed5df3930ada4cb8caccf1}} 
+\index{ui\_design.c@{ui\_design.c}!KRED@{KRED}}
+\index{KRED@{KRED}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{KRED}{KRED}}
+{\footnotesize\ttfamily \#define K\+R\+ED~\char`\"{}\textbackslash{}x1B\mbox{[}31m\char`\"{}}
+
+\mbox{\Hypertarget{ui__design_8c_af0036c8022c9980079ab17e5c87fd478}\label{ui__design_8c_af0036c8022c9980079ab17e5c87fd478}} 
+\index{ui\_design.c@{ui\_design.c}!KWHT@{KWHT}}
+\index{KWHT@{KWHT}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{KWHT}{KWHT}}
+{\footnotesize\ttfamily \#define K\+W\+HT~\char`\"{}\textbackslash{}x1B\mbox{[}37m\char`\"{}}
+
+\mbox{\Hypertarget{ui__design_8c_a897b10d246533c95ba86cb79f92e465a}\label{ui__design_8c_a897b10d246533c95ba86cb79f92e465a}} 
+\index{ui\_design.c@{ui\_design.c}!KYEL@{KYEL}}
+\index{KYEL@{KYEL}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{KYEL}{KYEL}}
+{\footnotesize\ttfamily \#define K\+Y\+EL~\char`\"{}\textbackslash{}x1B\mbox{[}33m\char`\"{}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ui__design_8c_a28a40d583f8a392cefdb4b69fab1d178}\label{ui__design_8c_a28a40d583f8a392cefdb4b69fab1d178}} 
+\index{ui\_design.c@{ui\_design.c}!br@{br}}
+\index{br@{br}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{br()}{br()}}
+{\footnotesize\ttfamily void br (\begin{DoxyParamCaption}\item[{int}]{line }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ui__design_8c_a81de7817e671329fc738e0efe1872547}\label{ui__design_8c_a81de7817e671329fc738e0efe1872547}} 
+\index{ui\_design.c@{ui\_design.c}!ccolor@{ccolor}}
+\index{ccolor@{ccolor}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{ccolor()}{ccolor()}}
+{\footnotesize\ttfamily void ccolor (\begin{DoxyParamCaption}\item[{int}]{clr }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{ui__design_8c_a182245157ae676038afc342f4efdae01}\label{ui__design_8c_a182245157ae676038afc342f4efdae01}} 
+\index{ui\_design.c@{ui\_design.c}!echo@{echo}}
+\index{echo@{echo}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{echo()}{echo()}}
+{\footnotesize\ttfamily void echo (\begin{DoxyParamCaption}\item[{char}]{print\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ui__design_8c_ae7c1bbe56322f641e8f3b34e72c5b5f5}\label{ui__design_8c_ae7c1bbe56322f641e8f3b34e72c5b5f5}} 
+\index{ui\_design.c@{ui\_design.c}!loading@{loading}}
+\index{loading@{loading}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{loading()}{loading()}}
+{\footnotesize\ttfamily void loading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{ui__design_8c_a6fd4d504766f3b5865c60fca8146c315}\label{ui__design_8c_a6fd4d504766f3b5865c60fca8146c315}} 
+\index{ui\_design.c@{ui\_design.c}!middle1@{middle1}}
+\index{middle1@{middle1}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{middle1()}{middle1()}}
+{\footnotesize\ttfamily void middle1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ui__design_8c_a5751a79e4a4a79bd9bdc4ed2ccc9d339}\label{ui__design_8c_a5751a79e4a4a79bd9bdc4ed2ccc9d339}} 
+\index{ui\_design.c@{ui\_design.c}!middtab1@{middtab1}}
+\index{middtab1@{middtab1}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{middtab1()}{middtab1()}}
+{\footnotesize\ttfamily void middtab1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ui__design_8c_a6db9b9c1573f5ffcbe3762d34161f880}\label{ui__design_8c_a6db9b9c1573f5ffcbe3762d34161f880}} 
+\index{ui\_design.c@{ui\_design.c}!pre@{pre}}
+\index{pre@{pre}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{pre()}{pre()}}
+{\footnotesize\ttfamily void pre (\begin{DoxyParamCaption}\item[{int}]{tab }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ui__design_8c_a39abd40f68d03c40857be1e74407efb9}\label{ui__design_8c_a39abd40f68d03c40857be1e74407efb9}} 
+\index{ui\_design.c@{ui\_design.c}!red@{red}}
+\index{red@{red}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{red()}{red()}}
+{\footnotesize\ttfamily void red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{ui__design_8c_ad20897c5c8bd47f5d4005989bead0e55}\label{ui__design_8c_ad20897c5c8bd47f5d4005989bead0e55}} 
+\index{ui\_design.c@{ui\_design.c}!reset@{reset}}
+\index{reset@{reset}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{ui__design_8c_ad89dde2c5c3b497489fa8c21d8dd780b}\label{ui__design_8c_ad89dde2c5c3b497489fa8c21d8dd780b}} 
+\index{ui\_design.c@{ui\_design.c}!span@{span}}
+\index{span@{span}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{span()}{span()}}
+{\footnotesize\ttfamily void span (\begin{DoxyParamCaption}\item[{int}]{space }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ui__design_8c_aa83f3a0c876012b8c217c721f9c7dac3}\label{ui__design_8c_aa83f3a0c876012b8c217c721f9c7dac3}} 
+\index{ui\_design.c@{ui\_design.c}!welcome\_screen@{welcome\_screen}}
+\index{welcome\_screen@{welcome\_screen}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{welcome\_screen()}{welcome\_screen()}}
+{\footnotesize\ttfamily void welcome\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{ui__design_8c_ab0c10e6284be130a7973fa029a690ef7}\label{ui__design_8c_ab0c10e6284be130a7973fa029a690ef7}} 
+\index{ui\_design.c@{ui\_design.c}!yellow@{yellow}}
+\index{yellow@{yellow}!ui\_design.c@{ui\_design.c}}
+\doxysubsubsection{\texorpdfstring{yellow()}{yellow()}}
+{\footnotesize\ttfamily void yellow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

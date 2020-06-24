@@ -1,0 +1,101 @@
+\hypertarget{record_8c}{}\doxysection{record.\+c File Reference}
+\label{record_8c}\index{record.c@{record.c}}
+
+
+This is header file which contains all the operations or functions of the user.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/record.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/ui\+\_\+design.\+h\char`\"{}}\newline
+Include dependency graph for record.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{record_8c_aee98bbe743c2d14dbaa67f01c3fb9ed5}{mkdir}} (const char $\ast$pathname, mode\+\_\+t mode)
+\item 
+void \mbox{\hyperlink{record_8c_abb2d5d88a388d973362772065e6ed105}{clean\+\_\+stdin}} ()
+\item 
+void \mbox{\hyperlink{record_8c_a4f1de0e4d909a1d6485f1cec0ddb71c9}{add\+Record}} (user $\ast$loginptr)
+\item 
+int \mbox{\hyperlink{record_8c_a84fc88948c248e4a6197604ff1372da7}{delete\+Record}} (user $\ast$loginptr)
+\item 
+int \mbox{\hyperlink{record_8c_a1280bb77e84a37e7510c44c42628cc15}{view\+Record}} (user $\ast$loginptr)
+\item 
+int \mbox{\hyperlink{record_8c_abbc243381fb0d71948047d5e2db40093}{edit\+Record}} (user $\ast$loginptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is header file which contains all the operations or functions of the user. 
+
+\begin{DoxyAuthor}{Author}
+Akhil Dama -\/ \href{mailto:akhildama@cmail.carleton.ca}{\texttt{ akhildama@cmail.\+carleton.\+ca}} 
+
+Meher Vishnu Kyatham -\/ \href{mailto:mehervishnukyatham@cmail.carleton.ca}{\texttt{ mehervishnukyatham@cmail.\+carleton.\+ca}} 
+
+Naveen Billapati-\/ \href{mailto:naveenbillapati@cmail.carleton.ca}{\texttt{ naveenbillapati@cmail.\+carleton.\+ca}} 
+
+Rajeshwar Reddy Keesara-\/ \href{mailto:rajeshwarreddykeesar@cmail.carleton.ca}{\texttt{ rajeshwarreddykeesar@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{record_8c_a4f1de0e4d909a1d6485f1cec0ddb71c9}\label{record_8c_a4f1de0e4d909a1d6485f1cec0ddb71c9}} 
+\index{record.c@{record.c}!addRecord@{addRecord}}
+\index{addRecord@{addRecord}!record.c@{record.c}}
+\doxysubsubsection{\texorpdfstring{addRecord()}{addRecord()}}
+{\footnotesize\ttfamily void add\+Record (\begin{DoxyParamCaption}\item[{user $\ast$}]{loginptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{record_8c_abb2d5d88a388d973362772065e6ed105}\label{record_8c_abb2d5d88a388d973362772065e6ed105}} 
+\index{record.c@{record.c}!clean\_stdin@{clean\_stdin}}
+\index{clean\_stdin@{clean\_stdin}!record.c@{record.c}}
+\doxysubsubsection{\texorpdfstring{clean\_stdin()}{clean\_stdin()}}
+{\footnotesize\ttfamily void clean\+\_\+stdin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{record_8c_a84fc88948c248e4a6197604ff1372da7}\label{record_8c_a84fc88948c248e4a6197604ff1372da7}} 
+\index{record.c@{record.c}!deleteRecord@{deleteRecord}}
+\index{deleteRecord@{deleteRecord}!record.c@{record.c}}
+\doxysubsubsection{\texorpdfstring{deleteRecord()}{deleteRecord()}}
+{\footnotesize\ttfamily int delete\+Record (\begin{DoxyParamCaption}\item[{user $\ast$}]{loginptr }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{record_8c_abbc243381fb0d71948047d5e2db40093}\label{record_8c_abbc243381fb0d71948047d5e2db40093}} 
+\index{record.c@{record.c}!editRecord@{editRecord}}
+\index{editRecord@{editRecord}!record.c@{record.c}}
+\doxysubsubsection{\texorpdfstring{editRecord()}{editRecord()}}
+{\footnotesize\ttfamily int edit\+Record (\begin{DoxyParamCaption}\item[{user $\ast$}]{loginptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{record_8c_aee98bbe743c2d14dbaa67f01c3fb9ed5}\label{record_8c_aee98bbe743c2d14dbaa67f01c3fb9ed5}} 
+\index{record.c@{record.c}!mkdir@{mkdir}}
+\index{mkdir@{mkdir}!record.c@{record.c}}
+\doxysubsubsection{\texorpdfstring{mkdir()}{mkdir()}}
+{\footnotesize\ttfamily int mkdir (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pathname,  }\item[{mode\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{record_8c_a1280bb77e84a37e7510c44c42628cc15}\label{record_8c_a1280bb77e84a37e7510c44c42628cc15}} 
+\index{record.c@{record.c}!viewRecord@{viewRecord}}
+\index{viewRecord@{viewRecord}!record.c@{record.c}}
+\doxysubsubsection{\texorpdfstring{viewRecord()}{viewRecord()}}
+{\footnotesize\ttfamily int view\+Record (\begin{DoxyParamCaption}\item[{user $\ast$}]{loginptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
