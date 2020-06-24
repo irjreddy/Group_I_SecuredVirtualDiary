@@ -203,7 +203,7 @@ int check_password(char *check_pass)
 
 {
 
-    int i=0,j;
+    int j;
 
     printf("For Security, Enter your old password");
 
@@ -213,7 +213,7 @@ int check_password(char *check_pass)
 
     {
 
-        i=0;
+        
 
         printf("\n\n\tENTER THE PASSWORD:");
 
@@ -267,7 +267,7 @@ int editPassword(user *loginuserptr)
 
     char confirm[15]= {0};
 
-    int choice,i,check;
+    int choice,check;
 
     FILE *fp;
 
@@ -319,7 +319,7 @@ int editPassword(user *loginuserptr)
 
         {
 
-            i=0;
+            
 
             choice=0;
 			char  password[20];

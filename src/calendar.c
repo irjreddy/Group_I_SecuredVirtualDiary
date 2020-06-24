@@ -180,7 +180,7 @@ void displayCalendar(int nyr,int nmonth,int tdays,int days[], user *loginptr)
         else
             SetColor(7); //Changing color to white for all days
     char date_str[100];
-    char foldername[100]="./records/";
+    
 
     char name[50] = "./";
 	strcat(name,loginptr->username);
@@ -195,7 +195,7 @@ void displayCalendar(int nyr,int nmonth,int tdays,int days[], user *loginptr)
         else{
             gotoxy(pos,j);printf("%d-%d-%d",i+1,nmonth,nyr);
         }
-        // gotoxy(pos,j);printf("%d-%d-%d",i+1,nmonth-1,nyr);
+        
         if(pos==91)
         {
             pos=21; //Moving position to monday
