@@ -63,7 +63,7 @@ int isuser(const char* username, const char* password, user *loginuser){ //Check
     }
 
 	while(!feof(usersfile)){
-		fscanf(usersfile, "%s %s %s", fileusername, filepass,filemail);
+		fscanf(usersfile, "%s %s %s ", fileusername, filepass,filemail);
 		if(strcmp(username, fileusername) == 0 && strcmp(password, filepass) == 0){
             loginuser->line = count;
 			fclose(usersfile);

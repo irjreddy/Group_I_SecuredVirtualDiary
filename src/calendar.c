@@ -172,8 +172,8 @@ void displayCalendar(int nyr,int nmonth,int tdays,int days[], user *loginptr)
         pos=71;  //if tdays is 5, position is friday
     if(tdays==6)
         pos=81;  //if tdays is 6, position is saturday
-
-    for(i=0,j=10,pos;i<days[nmonth-1];i++,pos+=10)
+	j=10;
+    for(i=0,i<days[nmonth-1];pos+=10)
     {
         if(pos==91)
             SetColor(8); //Changing color to dark grey for sunday
@@ -202,6 +202,7 @@ void displayCalendar(int nyr,int nmonth,int tdays,int days[], user *loginptr)
             j++;  //Increasing j by 10 if position is sunday
         }
         fclose(fp);
+	    i++;
     }
 
     SetColor(5); //Changing color to purple
