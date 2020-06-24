@@ -59,7 +59,7 @@ PROJECT_LOGO           =
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = C:\Users\dell\Desktop\c_p\Securedvirtualdiary\doc
+OUTPUT_DIRECTORY       = C:\Users\hp\Desktop\c_p\Securedvirtualdiary\doc
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -2580,4 +2580,8 @@ GENERATE_LEGEND        = YES
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
+<<<<<<< HEAD
 DOT_CLEANUP            = YES
+=======
+DOT_CLEANUP            = YES
+>>>>>>> 05e86acc3a38ddac5786cc19d5e29b0cecc932ca
