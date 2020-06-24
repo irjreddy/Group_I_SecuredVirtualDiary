@@ -9,6 +9,9 @@
  * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
  */
 
+#ifndef UI_DESIGN_H
+#define UI_DESIGN_H
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -100,3 +103,5 @@ void reset();
  *
  */
 void yellow();
+
+#endif
