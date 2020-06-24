@@ -8,6 +8,10 @@
  * @author Naveen Billapati- naveenbillapati@cmail.carleton.ca
  * @author Rajeshwar Reddy Keesara- rajeshwarreddykeesar@cmail.carleton.ca
  */
+
+#ifndef CALENDER_H
+#define CALENDER_H
+
 #include<stdio.h>
 #include<conio.h>
 #include<windows.h>
@@ -61,3 +65,4 @@ void calendar(int,int, user *loginptr);
  */ 
 int runCalendar(user *loginptr);
 
+#endif
